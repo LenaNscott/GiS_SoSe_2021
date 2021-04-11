@@ -146,6 +146,16 @@ image {
       height: auto;
   }
 
+  a.fb img{
+    height:50px;
+    width:50px;
+}
+
+a.insta img {
+    height:50px;
+    width:50px;
+}
+
 a.fb:hover img {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
