@@ -2,10 +2,11 @@
     overflow: hidden;
     background-color: black;
     margin-left: 72%;
-    margin-right: 10%;
+    margin-right: 30%;
     position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+    display: inline;
 }
 
 .menu a {
@@ -17,15 +18,16 @@
     text-decoration: none;
     font-size: 20px;
     border-right: 1px solid #f2f2f2;
+    background-color: black;
 }
 
+
 a.eins { 
-    text-decoration: none; 
     color: gold; 
 }
 
 a:hover {
-    color: #8FBC8F;
+    color: #8FBC8F; 
 }
 
 .seite {
@@ -42,17 +44,21 @@ a:hover {
     width: 100%;
 }
 
+.sticky + .content {
+    padding-top: 30px;
+}
+
 #index {
     color: red;
 }
 
-head body{
-    font-family: sans-serif;
-}
 
 body {
     background-image: url(Medien/muster-linien-diagonal.jpg);
-    text-align: center !important;
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    font-family: sans-serif;
 }
 
 table, th, td { 
@@ -63,12 +69,11 @@ table, th, td {
     padding: 10px;
     margin-bottom: 1px;
     margin-top: 5%;
-    text-align: center !important;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
-    height: auto;
 }
+
 
 
 #coll { 
@@ -76,7 +81,8 @@ table, th, td {
 }
 
 #sepa {
-    border-collapse: separate; margin-top: 2em; 
+    border-collapse: separate; 
+    margin-top: 2em; 
 }
 
 caption { 
@@ -84,8 +90,6 @@ caption {
 }
 
 image.Bild{
-    width: 800px;
-    height: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto
@@ -96,7 +100,7 @@ h1{
     padding-top: 30px;
     color:gold;
     background-image: url(Medien/2swvolleyball.jpg);
-    text-align: center !important;
+    text-align: center;
     background-position: center;
 }
   
@@ -106,7 +110,7 @@ h1{
 
 h2 {
     font-size: 70px;
-    text-align: center !important;
+    text-align: center;
     color: #8FBC8F;
 }
 
@@ -119,8 +123,6 @@ p {
     text-align: left;
     color: white;
     padding: 10px;
-    height: auto;
-    width: auto;
 }
 
 p.nachricht {
@@ -141,18 +143,11 @@ input {
   }
 
   textarea {
-      height: 100px;
-      width: 500px;
       font-size: 40px;
       color: gray;
       font-family: sans-serif;
   }
 
-
-image {
-      width: 800px;
-      height: auto;
-  }
 
   a.fb img{
     height:50px;
