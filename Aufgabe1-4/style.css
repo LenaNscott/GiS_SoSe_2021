@@ -355,7 +355,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 400px;
+        width: 100px;
         height: auto;
         margin: 0 auto;
     }
