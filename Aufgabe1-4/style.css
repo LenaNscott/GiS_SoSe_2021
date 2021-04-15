@@ -300,8 +300,6 @@ h2 {
 
      .menu {
         overflow: hidden;
-        margin-left: 40%;
-        margin-right: auto;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
@@ -355,7 +353,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 100px;
+        width: 300px;
         height: auto;
         margin: 0 auto;
     }
@@ -408,8 +406,6 @@ h2 {
 
      .menu {
         overflow: hidden;
-        margin-left: 40%;
-        margin-right: auto;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
@@ -440,13 +436,23 @@ h2 {
         }
     
         to {
-            width: 580px;
+            width: 300px;
             height: auto;
         }
     }
 
     img.Bil {
-        width: 580px;
+        width: 300px;
+        height: auto;
+    }
+
+    img.Bild {
+        width: 300px;
+        height: auto;
+    }
+
+    video {
+        width: 300px;
         height: auto;
     }
 
