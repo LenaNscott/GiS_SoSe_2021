@@ -244,17 +244,117 @@ h2 {
     }
 }
 
-@media screen and (min-width: 1025px){
 
-}
-
-@media screen and (min-width: 600px max-width 1024){
-    
-}
-
-@media screen and (max-width: 599px){
+@media screen and (min-width: 600px) and (max-width: 1024px){
     body {
-        width: 595px;
+        width: 600px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 70px;
+        text-align: center;
+        background-image: url(Medien/2swvolleyball.jpg);
+        background-position: center;
+    }
+
+    h1 {
+        animation-duration: 3s;
+        animation-name: h1;
+    }
+      
+    @keyframes h1 {
+        from {
+            font-size: 50px;
+        }
+    
+        to {
+            font-size: 70px;
+        }
+    }
+
+    a.fb img{
+        height:40px;
+        width:40px;
+    }
+    
+    a.insta img {
+        height:40px;
+        width:40px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    table, th, td {  
+        font-size: 25px;
+        padding: 7px;
+        margin-bottom: 1px;
+        margin-top: 5%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+     .menu {
+        overflow: hidden;
+        margin-left: 40%;
+        margin-right: auto;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        display: inline;
+    }
+    
+    .menu a {
+        display: table;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    img.Bil {
+        animation-duration: 3s;
+        animation-name: bild;
+    }
+      
+    @keyframes bild {
+        from {
+            width: 100px;
+            height: auto;
+        }
+    
+        to {
+            width: 600px;
+            height: auto;
+        }
+    }
+
+    img.Bil {
+        width: 600px;
+        height: auto;
+    }
+
+    ol {
+        font-size: 20px;
+        margin: 0 auto;
+    }
+
+    ul {
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+    
+
+@media screen and (max-width: 600px){
+    body {
+        width: 600px;
         height: auto;
     }
 
@@ -295,7 +395,7 @@ h2 {
     }
 
     table, th, td {  
-        font-size: 20px;
+        font-size: 15px;
         padding: 5px;
         margin-bottom: 1px;
         margin-top: 5%;
@@ -312,16 +412,18 @@ h2 {
         position: sticky;
         top: 0;
         display: inline;
+        text-align: center;
     }
     
     .menu a {
         display: table;
         padding: 10px;
         font-size: 10px;
+        float:right;
     }
 
     p {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     img.Bil {
@@ -336,13 +438,24 @@ h2 {
         }
     
         to {
-            width: 595px;
+            width: 580px;
             height: auto;
         }
     }
 
     img.Bil {
-        width: 595px;
+        width: 580px;
         height: auto;
+    }
+
+    ol {
+        font-size: 10px;
+        margin: 0 auto;
+    }
+
+    ul {
+        font-size: 10px;
+        margin: 0 auto;
+        text-align: center;
     }
 }
