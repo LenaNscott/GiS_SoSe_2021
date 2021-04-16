@@ -357,7 +357,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 420px; /* Bei 450px war mein Bilschirm des Handys ausgefüllt sowei auf der Seite zum Prüfen */
+        width: 410px; /* Bei 410px war mein Bilschirm des Handys ausgefüllt sowei auf der Seite zum Prüfen */
         height: auto;
     }
 

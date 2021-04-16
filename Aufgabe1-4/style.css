@@ -374,7 +374,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 420px; /* Bei 450px war mein Bilschirm des Handys ausgefüllt sowei auf der Seite zum Prüfen */
+        width: 410px; /* Bei 410px war mein Bilschirm des Handys ausgefüllt sowei auf der Seite zum Prüfen */
         height: auto;
         margin: 0 auto;
     }
@@ -466,23 +466,23 @@ h2 {
         }
     
         to {
-            width: 420px;
+            width: 410px;
             height: auto;
         }
     }
 
     img.Bil {
-        width: 420px;
+        width: 410px;
         height: auto;
     }
 
     img.Bild {
-        width: 420px;
+        width: 410px;
         height: auto;
     }
 
     video {
-        width: 420px;
+        width: 410px;
         height: auto;
     }
 
@@ -492,7 +492,7 @@ h2 {
     }
 
     audio {
-        width: 450px;
+        width: 410px;
         height: auto;
     }
 
