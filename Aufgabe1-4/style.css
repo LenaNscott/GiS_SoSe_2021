@@ -6,12 +6,12 @@
     position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-    display: inline;
+    display: flex;
 }
 
 .menu a {
     float: right;
-    display: inline;
+    display: flex;
     color: #f2f2f2;
     text-align: center;
     padding: 15px;
@@ -245,9 +245,9 @@ h2 {
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 1024px){
+@media screen and (min-width: 601px) and (max-width: 1024px){
     body {
-        width: 600px;
+        width: 601px;
         height: auto;
         margin: 0 auto;
     }
@@ -307,7 +307,7 @@ h2 {
     }
     
     .menu a {
-        display: table;
+        display: flex;
         padding: 10px;
         font-size: 10px;
     }
@@ -353,7 +353,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 300px;
+        width: 400px;
         height: auto;
         margin: 0 auto;
     }
