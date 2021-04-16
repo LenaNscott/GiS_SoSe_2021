@@ -353,7 +353,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 400px;
+        width: 450px;
         height: auto;
         margin: 0 auto;
     }
@@ -436,29 +436,34 @@ h2 {
         }
     
         to {
-            width: 300px;
+            width: 450px;
             height: auto;
         }
     }
 
     img.Bil {
-        width: 300px;
+        width: 450px;
         height: auto;
     }
 
     img.Bild {
-        width: 300px;
+        width: 450px;
         height: auto;
     }
 
     video {
-        width: 300px;
+        width: 450px;
         height: auto;
     }
 
     ol {
         font-size: 10px;
         margin: 0 auto;
+    }
+
+    audio {
+        width: 450px;
+        height: auto;
     }
 
     ul {
