@@ -1,3 +1,4 @@
+/* Am Laptop hat sich zwischen Tablet und Desktop nichts verändert, habe es aber am Computer probiert wo es sich vom Desktop zu Tablet zu Mobil verändert hat*/
 .menu {
     overflow: hidden;
     background-color: black;
@@ -6,12 +7,12 @@
     position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-    display: flex;
+    display: inline;
 }
 
 .menu a {
     float: right;
-    display: flex;
+    display: table;
     color: #f2f2f2;
     text-align: center;
     padding: 15px;
@@ -171,11 +172,20 @@ img.Bil {
 a.fb img{
     height:50px;
     width:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 430px;
 }
 
 a.insta img {
     height:50px;
     width:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 370px;
+    margin-top: -50px;
 }
 
 a.fb:hover img {
@@ -277,11 +287,22 @@ h2 {
     a.fb img{
         height:40px;
         width:40px;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 300px;
     }
     
     a.insta img {
         height:40px;
         width:40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 250px;
+        margin-right: 20px;
+        margin-top: -40px;
     }
 
     h2 {
@@ -353,7 +374,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 450px;
+        width: 420px; /* Bei 450px war mein Bilschirm des Handys ausgefüllt sowei auf der Seite zum Prüfen */
         height: auto;
         margin: 0 auto;
     }
@@ -383,13 +404,22 @@ h2 {
     a.fb img{
         height:30px;
         width:30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 240px;
     }
     
     a.insta img {
         height:30px;
         width:30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 200px;
+        margin-right: 0;
+        margin-top: -30px;
     }
-
     h2 {
         font-size: 30px;
     }
@@ -436,23 +466,23 @@ h2 {
         }
     
         to {
-            width: 450px;
+            width: 420px;
             height: auto;
         }
     }
 
     img.Bil {
-        width: 450px;
+        width: 420px;
         height: auto;
     }
 
     img.Bild {
-        width: 450px;
+        width: 420px;
         height: auto;
     }
 
     video {
-        width: 450px;
+        width: 420px;
         height: auto;
     }
 

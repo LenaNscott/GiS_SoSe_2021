@@ -166,11 +166,20 @@ input {
   a.fb img{
     height:50px;
     width:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 430px;
 }
 
 a.insta img {
     height:50px;
     width:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 370px;
+    margin-top: -50px;
 }
 
 a.fb:hover img {
@@ -220,7 +229,7 @@ h2 {
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 1024px){
+@media screen and (min-width: 601px) and (max-width: 1024px){
     body {
         width: 600px;
         height: auto;
@@ -249,13 +258,23 @@ h2 {
     }
 
     a.fb img{
-        height:40px;
-        width:40px;
+        height:30px;
+        width:30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 240px;
     }
     
     a.insta img {
-        height:40px;
-        width:40px;
+        height:30px;
+        width:30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 200px;
+        margin-right: 2px;
+        margin-top: -30px;
     }
 
     h2 {
@@ -338,7 +357,7 @@ h2 {
 
 @media screen and (max-width: 600px){
     body {
-        width: 450px;
+        width: 420px; /* Bei 450px war mein Bilschirm des Handys ausgefüllt sowei auf der Seite zum Prüfen */
         height: auto;
     }
 
