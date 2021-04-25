@@ -1,28 +1,49 @@
 "use strict";
 //a)
 function hashtags() {
-    var f = "#";
+    var f = "";
     for (var j = 0; j <= 6; j++) {
         f += "#";
         console.log(f);
     }
 }
 hashtags();
-//b) / C)
-function zahlenreihe(p = 1) {
-    while (p <= 100)
-        ;
-    if (p / 3 && p % 0) {
-        console.log("Fizz");
-    }
-    if (p / 5 && p / 3) {
-        console.log("Buzz");
-    }
-    if (p / 5 && p / 3 && p % 0) {
-        console.log("FizzBuzz");
+//b) 
+function zahlenreihe() {
+    var p = 1;
+    while (p <= 100) {
+        if (p % 3 == 0) {
+            console.log("Fizz");
+        }
+        else if (p % 5 == 0) {
+            console.log("Buzz");
+        }
+        else {
+            console.log(p);
+        }
+        p++;
     }
 }
 zahlenreihe();
+// c)
+function zahlenreihe2() {
+    var p = 1;
+    while (p <= 100) {
+        let s = "";
+        if (p % 3 == 0) {
+            s = "Fizz";
+        }
+        if (p % 5 == 0) {
+            s += "Buzz";
+        }
+        if (p % 3 != 0 && p % 5 != 0) {
+            s = String(p);
+        }
+        console.log(s);
+        p++;
+    }
+}
+zahlenreihe2();
 // d)
 function schachbrett() {
     var s = "";

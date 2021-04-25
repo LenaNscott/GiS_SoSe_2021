@@ -1,7 +1,7 @@
 //a)
 
 function hashtags() {
-    var f: string = "#";
+    var f: string = "";
     for (var j = 0; j <= 6; j++) {
         f += "#";
         console.log(f);
@@ -10,24 +10,47 @@ function hashtags() {
 
 hashtags();
 
-//b) / C)
+//b) 
 
-function zahlenreihe(p: number = 1) {
-    while (p <= 100);
-    if (p / 3 && p % 0) {
+function zahlenreihe() {
+    var p: number = 1;
+    while (p <= 100) {
+    if (p % 3 == 0) {
         console.log("Fizz");
     }
-
-    if (p / 5 && p ! / 3) {
+    else if (p % 5 == 0) {
         console.log("Buzz");
     }
-
-    if (p / 5 && p / 3 && p % 0) {
-        console.log("FizzBuzz");
+    else {
+        console.log(p);
     }
+    p++;
+}
 }
 
 zahlenreihe();
+
+// c)
+
+function zahlenreihe2() {
+    var p: number = 1;
+    while (p <= 100) {
+    let s: string = "";
+    if (p % 3 == 0) {
+        s = "Fizz";
+    }
+    if (p % 5 == 0) {
+        s += "Buzz";
+    }
+    if (p % 3 != 0 && p % 5 != 0) {
+        s = String(p);
+    }
+    console.log(s);
+    p++;
+}
+}
+
+zahlenreihe2();
 
 // d)
 
