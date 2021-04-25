@@ -19,40 +19,44 @@ max(5, 20);
 function aufzaelen() {
     let i = 1;
     let j = 0;
-    while (i <= 100)
+    while (i <= 100) {
         j += i;
-    i++;
+        i++;
+    }
     console.log(j);
 }
 aufzaelen();
 //d)
 function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+    for (var i = 0; i < 10; i++)
+        console.log(Math.random() * 100);
 }
-console.log(getRandomInt(101));
 getRandomInt(100);
 //e) 
 function factorial(n) {
+    let ergebnis = 1;
     if (n < 1) {
         console.log(1);
     }
-    let m;
-    {
-        while (m < 1)
-            m = n * (n - 1);
+    else {
+        let m = 1;
+        while (m <= n) {
+            ergebnis *= m;
+            m++;
+        }
     }
-    console.log(m);
+    console.log(ergebnis);
 }
-factorial(4);
+factorial(5);
 //f)
-function leapyears(n) {
-    if (n / 4) {
-        if (n / 400)
-            console.log(n);
-        else
-            (n / 100);
-        n++;
-    }
-    leapyears(1900);
-}
+/*
+ function leapyears(n: number) {
+   if (n / 4) {
+     if (n / 400) console.log(n);
+     else (n !/ 100);
+ n++
+ }
+ }
+ leapyears(1900);
+ */ 
 //# sourceMappingURL=Aufgabe_5.js.map

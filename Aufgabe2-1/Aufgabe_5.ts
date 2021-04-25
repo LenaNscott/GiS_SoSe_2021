@@ -25,9 +25,10 @@ max(5, 20);
 function aufzaelen(): void {
     let i: number = 1;
     let j: number = 0;
-   while ( i <= 100)
+   while ( i <= 100) {
      j += i;
      i++ 
+   }
    console.log(j);
 }
 
@@ -36,36 +37,39 @@ aufzaelen();
 //d)
 
 function getRandomInt(max: number) {
-  return Math.floor(Math.random() * max);
-  }
-  
- console.log(getRandomInt(101));
+  for (var i = 0 ; i < 10 ; i++)
+  console.log(Math.random() * 100);
+}
 
  getRandomInt(100);
 
  //e) 
 
- function factorial(n: number) {
+function factorial(n: number) {
+ let ergebnis: number = 1;
  if (n < 1) {
    console.log(1);
  }
- let m: number;
-  else {
-    while (m < 1)
- m = n * (n - 1);
+ else {
+  let m: number = 1;  
+  while (m <= n){
+  ergebnis *= m;
+  m++;
   }
-  console.log(m);
+  }
+ console.log(ergebnis);
  }
 
- factorial(4);
+factorial(5);
 
  //f)
-
+/*
  function leapyears(n: number) {
    if (n / 4) {
      if (n / 400) console.log(n);
      else (n !/ 100); 
  n++
  }
-
+ }
  leapyears(1900);
+ */
