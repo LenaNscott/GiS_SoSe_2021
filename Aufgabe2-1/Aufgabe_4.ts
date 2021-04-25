@@ -1,10 +1,10 @@
 let x: string = "Hallo";
 console.log(x);         //Es wird x in der Kosole ausgegeben in dem Fall den String "Hallo", 
-func1(x);               //danach wird der Fuktion "func1" der Parameter x übergeben welcherin der Funktion mit "Bla" überschrieben wird
-console.log(x);         // als nächstes wird wieder x ausgegeben in diesem Fall wieder der String "Hallo"
+func1(x);               //danach wird die Fuktion "func1" der Parameter x übergeben welcher in der Funktion mit "Bla" überschrieben wird
+console.log(x);         // als nächstes wird wieder x ausgegeben in diesem Fall wieder der String "Hallo" (da der string "Bla" eine lokale Variable ist)
 func2();                // die Funktion "func2" wird aufgerufen und x wird in der Konsole ausgegeben in dem Fall "Blubb"
-func3();                // die Funktion "func3" wird aufgerufen 
-console.log(x);         // es wird wieder x in der Konsole ausgegeben in dem Fall wieder den string "Hallo"
+func3();                // die Funktion "func3" wird aufgerufen und "Test" in der Konsole ausgegeben
+console.log(x);         // es wird wieder x in der Konsole ausgegeben in dem Fall wieder den string "Hallo" (der string ist global)
 
 function func1(y: string): void {
     y = "Bla";
