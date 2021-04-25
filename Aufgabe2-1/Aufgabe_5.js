@@ -16,7 +16,7 @@ function max(f, g) {
 }
 max(5, 20);
 //c)
-function aufzaelen() {
+function Aufzaelen() {
     let i = 1;
     let j = 0;
     while (i <= 100) {
@@ -25,7 +25,7 @@ function aufzaelen() {
     }
     console.log(j);
 }
-aufzaelen();
+Aufzaelen();
 //d)
 function getRandomInt(max) {
     for (var i = 0; i < 10; i++)
@@ -34,18 +34,18 @@ function getRandomInt(max) {
 getRandomInt(100);
 //e) 
 function factorial(n) {
-    let ergebnis = 1;
     if (n < 1) {
         console.log(1);
     }
     else {
+        let ergebnis = 1;
         let m = 1;
         while (m <= n) {
             ergebnis *= m;
             m++;
         }
+        console.log(ergebnis);
     }
-    console.log(ergebnis);
 }
 factorial(5);
 //f)

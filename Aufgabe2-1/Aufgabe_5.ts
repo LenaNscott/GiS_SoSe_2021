@@ -22,17 +22,17 @@ max(5, 20);
 
 //c)
 
-function aufzaelen(): void {
+function Aufzaelen(): void {
     let i: number = 1;
     let j: number = 0;
-   while ( i <= 100) {
-     j += i;
-     i++ 
+    while ( i <= 100) {
+    j += i;
+    i++;
    }
-   console.log(j);
+    console.log(j);
 }
 
-aufzaelen();
+Aufzaelen();
 
 //d)
 
@@ -46,18 +46,19 @@ function getRandomInt(max: number) {
  //e) 
 
 function factorial(n: number) {
- let ergebnis: number = 1;
  if (n < 1) {
    console.log(1);
  }
  else {
+  let ergebnis: number = 1;
   let m: number = 1;  
-  while (m <= n){
+  while (m <= n) {
   ergebnis *= m;
   m++;
   }
+  console.log(ergebnis);
   }
- console.log(ergebnis);
+ 
  }
 
 factorial(5);

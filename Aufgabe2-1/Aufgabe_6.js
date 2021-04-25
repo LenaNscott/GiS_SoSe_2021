@@ -1,15 +1,15 @@
 "use strict";
 //a)
-function hashtags() {
+function Hashtags() {
     var f = "";
-    for (var j = 0; j <= 6; j++) {
+    for (var i = 0; i <= 6; i++) {
         f += "#";
         console.log(f);
     }
 }
-hashtags();
+Hashtags();
 //b) 
-function zahlenreihe() {
+function Zahlenreihe() {
     var p = 1;
     while (p <= 100) {
         if (p % 3 == 0) {
@@ -24,9 +24,9 @@ function zahlenreihe() {
         p++;
     }
 }
-zahlenreihe();
+Zahlenreihe();
 // c)
-function zahlenreihe2() {
+function Zahlenreihe2() {
     var p = 1;
     while (p <= 100) {
         let s = "";
@@ -43,9 +43,9 @@ function zahlenreihe2() {
         p++;
     }
 }
-zahlenreihe2();
+Zahlenreihe2();
 // d)
-function schachbrett() {
+function Schachbrett() {
     var s = "";
     for (var j = 0; j <= 3; j++) {
         for (var i = 0; i <= 3; i++) {
@@ -59,9 +59,9 @@ function schachbrett() {
     }
     console.log(s);
 }
-schachbrett();
+Schachbrett();
 // e) 
-function schachbrett2(n) {
+function Schachbrett2(n) {
     var s = "";
     for (var l = 0; l < n; l++) {
         for (var i = 0; i < n; i++) {
@@ -76,5 +76,5 @@ function schachbrett2(n) {
     }
     console.log(s);
 }
-schachbrett2(9);
+Schachbrett2(9);
 //# sourceMappingURL=Aufgabe_6.js.map

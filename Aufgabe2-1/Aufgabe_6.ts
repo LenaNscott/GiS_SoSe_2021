@@ -1,18 +1,18 @@
 //a)
 
-function hashtags() {
+function Hashtags(): void {
     var f: string = "";
-    for (var j = 0; j <= 6; j++) {
+    for (var i = 0; i <= 6; i++) {
         f += "#";
         console.log(f);
     }
 }
 
-hashtags();
+Hashtags();
 
 //b) 
 
-function zahlenreihe() {
+function Zahlenreihe(): void {
     var p: number = 1;
     while (p <= 100) {
     if (p % 3 == 0) {
@@ -28,11 +28,11 @@ function zahlenreihe() {
 }
 }
 
-zahlenreihe();
+Zahlenreihe();
 
 // c)
 
-function zahlenreihe2() {
+function Zahlenreihe2(): void {
     var p: number = 1;
     while (p <= 100) {
     let s: string = "";
@@ -50,29 +50,29 @@ function zahlenreihe2() {
 }
 }
 
-zahlenreihe2();
+Zahlenreihe2();
 
 // d)
 
-function schachbrett() {
+function Schachbrett(): void {
     var s: string = "";
     for (var j = 0; j <= 3; j++) {
         for (var i = 0; i <= 3; i++) {
         s += " #";
     }
-    s += "\n";
+        s += "\n";
         for (var k = 0; k <= 3; k++) {
         s += "# ";
     }
-    s += "\n";
+        s += "\n";
     }
     console.log(s);
 }
 
-schachbrett();
+Schachbrett();
 // e) 
 
-function schachbrett2(n: number) {
+function Schachbrett2(n: number) {
     var s: string = "";
     for (var l = 0; l < n; l++) {
         for (var i = 0; i < n; i++) {
@@ -84,4 +84,4 @@ function schachbrett2(n: number) {
     console.log(s);
 }
 
-schachbrett2(9);
+Schachbrett2(9);
