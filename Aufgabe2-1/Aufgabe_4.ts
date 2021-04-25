@@ -21,7 +21,7 @@ function func3(): void {
 }
 
 /* a)
-Es wird x in der Kosole ausgegeben in dem Fall den String "Hallo", 
+Es wird x in der Konsole ausgegeben in dem Fall den String "Hallo", 
 danach wird die Fuktion "func1" der Parameter x übergeben welcher in der Funktion mit "Bla" überschrieben wird
 als nächstes wird wieder x ausgegeben in diesem Fall wieder der String "Hallo" (da der string "Bla" eine lokale Variable ist)
 die Funktion "func2" wird aufgerufen und x wird in der Konsole ausgegeben in dem Fall "Blubb" (lokale Variable)
@@ -31,7 +31,7 @@ gesamt wird "Hallo Bla Hallo Blubb Test Hallo" ausgegeben
 
 b) globale Variablen: kann von überall drauf zugreifen
 lokale Variable: existiert nur zwischen {}
-übergabeparameter: ein/mehrere Parameter wird einer Fuktion übergeben
-Variable/Funktionen Unterschied: Variablen müssen deklariert werden
-Variablen/Fuktionen gemeinsamkeiten: brauchen einen Befehl zum aufrufen
+übergabeparameter: ein/mehrere Variablen wird einer Funktion übergeben
+Variable/Funktionen Unterschied: Variable speichert einen Wert, Funktionen führen eine Aktion aus
+Variablen/Fuktionen Gemeinsamkeiten: müssen deklariert werden, haben einen Gültigkeitsbereich
 */
