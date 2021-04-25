@@ -63,13 +63,18 @@ function factorial(n: number) {
 factorial(5);
 
  //f)
-/*
- function leapyears(n: number) {
-   if (n / 4) {
-     if (n / 400) console.log(n);
-     else (n !/ 100); 
- n++
+
+function leapyears() {
+  let year: number = 1900;
+  while (year <= 2021)
+  {
+    if (year % 400 == 0){
+      console.log(year);
+    }
+    else if (year % 4 == 0 && year % 100 != 0){
+      console.log(year);
+    }
+  year++;
+  }
  }
- }
- leapyears(1900);
- */
+ leapyears();
