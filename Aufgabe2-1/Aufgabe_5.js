@@ -27,11 +27,12 @@ function Aufzaelen() {
 }
 Aufzaelen();
 //d)
-function getRandomInt(max) {
-    for (var i = 0; i < 10; i++)
-        console.log(Math.random() * 100);
+/* function getRandomInt (a: number) {
+  for (let i = 0 ; i < 10 ; i++)
+  console.log(Math.random() * 100);
 }
-getRandomInt(100);
+
+ getRandomInt(100); */
 //e) 
 function factorial(n) {
     if (n < 1) {

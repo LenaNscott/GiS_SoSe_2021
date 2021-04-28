@@ -36,12 +36,12 @@ Aufzaelen();
 
 //d)
 
-function getRandomInt(max: number) {
-  for (var i = 0 ; i < 10 ; i++)
+/* function getRandomInt (a: number) {
+  for (let i = 0 ; i < 10 ; i++)
   console.log(Math.random() * 100);
 }
 
- getRandomInt(100);
+ getRandomInt(100); */
 
  //e) 
 
