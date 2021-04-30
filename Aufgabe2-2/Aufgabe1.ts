@@ -19,18 +19,17 @@ min(2, 5, 20, 1, 200, 39);
 
 function isEven (c: number) {
   if (c == 0) {
-    console.log(true);
+    return(true);
   }
 
   if (c == 1) {
-    console.log(false);
+    return(false);
   }
 
 else {
   c -= 2;
   isEven(c);
   }
-  
 }
 
 isEven(50);
