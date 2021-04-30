@@ -1,38 +1,35 @@
 //a)
 
 function min(b: number, ...args: number[]) {
-    let a: number[];
-    let min: number = a[0];
+    let a: number[] = [ ];
+    let mini: number = a[0];
     args.push(b);
-    for(let i = 0 ; i < a.length ; i++) {
-      if (min > a[i]) {
-          min = a[i];
+    for (let i = 0 ; i < a.length ; i++) {
+      if (mini > a[i]) {
+          mini = a[i];
       }  
+      console.log(mini);
     }
-    console.log(min);
+    
 }
 
 min(2, 5, 20, 1, 200, 39);
 
 //b)
 
-function isEven(c: number) {
-  if (c % 2 == 0) {
-    return(true);
+function isEven (c: number) {
+  if (c == 0) {
+    console.log(true);
   }
 
-  isEven(50);
-
-  if (c % 2 == 1) {
-    return(false);
+  if (c == 1) {
+    console.log(false);
   }
 
-  isEven(75);
-
-if (c % 2 != 0 && c % 2 != 1) {
+else {
   c -= 2;
-  return(c);
-}
+  isEven(c);
+  }
   
 }
 
@@ -53,8 +50,9 @@ let s2: Student = {vorname: "Lara", nachname: "Schulz" , alter: 20 , matrikelnum
 let s3: Student = {vorname: "Lisa", nachname: "Müller" , alter: 20 , matrikelnummer: 564739};
 
 let stud: Student[] = [s1, s2, s3];
+stud.push({vorname: "Bea" , nachname: "Baum" , alter: 22 , matrikelnummer: 341289});
 
-console.log(stud.push(vorname: "Bea" , nachname: "Baum" , alter: 22 , matrikelnummer: 341289));
+console.log(stud[0]);
 
 function showInfo(s: Student) {
   console.log(s.vorname);
