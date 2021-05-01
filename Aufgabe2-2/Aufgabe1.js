@@ -2,14 +2,14 @@
 //a)
 function min(...args) {
     let mini = args[0];
-    for (let i = 0; i < a.length; i++) {
-        if (mini[0] > args[i]) {
-            mini[0] = args[i];
+    for (let i = 1; i < args.length; i++) {
+        if (mini > args[i]) {
+            mini = args[i];
         }
-        console.log(mini);
     }
+    console.log(mini);
 }
-min(3, 6, 5);
+min(3, 6, 5, 1);
 //b)
 function isEven(c) {
     if (c == 0) {

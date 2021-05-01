@@ -1,18 +1,18 @@
 //a)
 
 function min(... args: number[]) {
-    let mini: number[] = args[0];
+    let mini: number = args[0];
     
-    for (let i = 0 ; i < a.length ; i++) {
-      if (mini[0] > args[i]) {
-          mini[0] = args[i];
+    for (let i = 1 ; i < args.length ; i++) {
+      if (mini > args[i]) {
+          mini = args[i];
       }  
-      console.log(mini);
+     
     }
-    
+    console.log(mini);
 }
 
-min(3, 6, 5);
+min(3, 6, 5, 1);
 
 //b)
 
@@ -25,16 +25,16 @@ function isEven (c: number) {
     console.log(false);
   }
 
-else {
-  c -= 2;
-  isEven(c);
+  else {
+    c -= 2;
+    isEven(c);
   }
 }
 
 isEven(50);
 
-// -1 wird nie positiv und somit wird immer wieder die Funktion aufgerufen und mit 2 subtrahiert. Lösung wäre den Parameter hoch 2 zu nehmen, so wären auch negative Zahlen positiv.
-
+// -1 wird nie positiv und somit wird immer wieder die Funktion aufgerufen und mit 2 subtrahiert und hängt in einer Dauerschleife fest. 
+// Eine Lösung dafür wäre, den Betrag der Zahl zu nehmen oder bei negativen Zahlen statt -2, +2 dazu zu addieren.
 //c)
 
 //1

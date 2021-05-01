@@ -1,23 +1,17 @@
 "use strict";
 //5
-/* class Student {
-
-    constructor () {
-    let vorname: string;
-    let nachname: string;
-    let alter: number;
-    let matrikelnummer: number;
+class Student {
+    constructor() {
+        let vorname;
+        let nachname;
+        let alter;
+        let matrikelnummer;
     }
-  
-    names: Student[] = [s1, s2, s3];
-  
-  
-    showInfo2(s: Student) {
-    console.log(s.vorname);
-    console.log(s.nachname);
-    console.log(s.matrikelnummer);
-    console.log(s.alter);
+    showInfo(s) {
+        console.log(s.vorname);
+        console.log(s.nachname);
+        console.log(s.matrikelnummer);
+        console.log(s.alter);
     }
-  
-  } */
+}
 //# sourceMappingURL=Aufgabe1_5.js.map
