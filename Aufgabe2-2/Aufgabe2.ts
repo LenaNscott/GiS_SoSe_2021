@@ -20,3 +20,9 @@ function join (b: number[], c: number[]) {
 
 let a: number[] = [2, 8, 4, 1 ];
 join(c, a);
+
+//c)
+
+function split(e: number[], f: number, g: number) {
+    
+}

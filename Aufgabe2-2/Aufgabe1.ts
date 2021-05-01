@@ -1,19 +1,18 @@
 //a)
 
-function min(b: number, ...args: number[]) {
-    let a: number[] = [ ];
-    let mini: number = a[0];
-    args.push(b);
+function min(... args: number[]) {
+    let mini: number[] = args[0];
+    
     for (let i = 0 ; i < a.length ; i++) {
-      if (mini > a[i]) {
-          mini = a[i];
+      if (mini[0] > args[i]) {
+          mini[0] = args[i];
       }  
       console.log(mini);
     }
     
 }
 
-min(2, 5, 20, 1, 200, 39);
+min(3, 6, 5);
 
 //b)
 

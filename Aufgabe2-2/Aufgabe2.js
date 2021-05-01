@@ -16,4 +16,7 @@ function join(b, c) {
 }
 let a = [2, 8, 4, 1];
 join(c, a);
+//c)
+function split(e, f, g) {
+}
 //# sourceMappingURL=Aufgabe2.js.map
