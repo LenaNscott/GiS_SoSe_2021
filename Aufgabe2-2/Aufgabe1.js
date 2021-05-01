@@ -24,13 +24,40 @@ function isEven(c) {
     }
 }
 isEven(50);
+// -1 wird nie positiv und somit wird immer wieder die Funktion aufgerufen und mit 2 subtrahiert und hängt in einer Dauerschleife fest. 
+// Eine Lösung dafür wäre, den Betrag der Zahl zu nehmen oder bei negativen Zahlen statt -2, +2 dazu zu addieren.
+//c)
+//1
+/*
+interface Student {
+    vorname: string;
+    nachname: string;
+    alter: number;
+    matrikelnummer: number;
+  }
+*/
+//5
+class Student {
+    constructor(_vorname, _nachname, _alter, _matrikelnummer) {
+        this.vorname = _vorname;
+        this.nachname = _nachname;
+        this.alter = _alter;
+        this.matrikelnummer = _matrikelnummer;
+    }
+    showInfo() {
+        console.log(this.vorname);
+        console.log(this.nachname);
+        console.log(this.matrikelnummer);
+        console.log(this.alter);
+    }
+}
 //2
-let s1 = { vorname: "Anna", nachname: "Mayer", alter: 19, matrikelnummer: 234562 };
-let s2 = { vorname: "Lara", nachname: "Schulz", alter: 20, matrikelnummer: 395727 };
-let s3 = { vorname: "Lisa", nachname: "Müller", alter: 20, matrikelnummer: 564739 };
-//3!
+let s1 = new Student("Anna", "Mayer", 19, 234562);
+let s2 = new Student("Lara", "Schulz", 20, 395727);
+let s3 = new Student("Lisa", "Müller", 20, 564739);
+//3
 let stud = [s1, s2, s3];
-stud.push({ vorname: "Bea", nachname: "Baum", alter: 22, matrikelnummer: 341289 });
+stud.push(new Student("Bea", "Baum", 22, 341289));
 console.log(stud[0]);
 //4
 function showInfo(s) {
