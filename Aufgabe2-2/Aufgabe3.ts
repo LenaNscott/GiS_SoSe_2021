@@ -20,3 +20,26 @@ context.fillRect(450, 150, context.canvas.width, 200);
 
 context.fillStyle = "#8B4513";
 context.fillRect(300, 100, context.canvas.width, 250);
+
+//b)
+
+interface Rechteck {
+    x: number;
+    y: number;
+
+}
+
+//c)
+
+function createRect() {
+
+}
+
+//d)
+
+function drawRect() {
+
+}
+
+//e)
+

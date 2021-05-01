@@ -1,5 +1,5 @@
 //5
-class Student {
+/* class Student {
 
     constructor () {
     let vorname: string;
@@ -18,8 +18,6 @@ class Student {
     console.log(s.alter);
     }
   
-    showInfo2(names[0]);
-    showInfo2(names[1]);
-    showInfo2(names[2]);
-    showInfo2(names[3]);
-  }
+  } */
+
+  

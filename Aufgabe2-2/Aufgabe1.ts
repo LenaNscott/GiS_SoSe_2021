@@ -1,6 +1,6 @@
 //a)
 
-/* function min(... args: number[]) {
+function min(... args: number[]) {
     let mini: number[] = args[0];
     
     for (let i = 0 ; i < a.length ; i++) {
@@ -12,7 +12,7 @@
     
 }
 
-min(3, 6, 5); */
+min(3, 6, 5);
 
 //b)
 
@@ -53,7 +53,7 @@ let s3: Student = {vorname: "Lisa", nachname: "Müller" , alter: 20 , matrikelnu
 let stud: Student[] = [s1, s2, s3];
 stud.push({vorname: "Bea" , nachname: "Baum" , alter: 22 , matrikelnummer: 341289});
 
-console.log(stud[0]);
+console.log(stud[0]); 
 //4
 function showInfo(s: Student) {
   console.log(s.vorname);

@@ -1,18 +1,15 @@
 "use strict";
 //a)
-/* function min(... args: number[]) {
-    let mini: number[] = args[0];
-    
-    for (let i = 0 ; i < a.length ; i++) {
-      if (mini[0] > args[i]) {
-          mini[0] = args[i];
-      }
-      console.log(mini);
+function min(...args) {
+    let mini = args[0];
+    for (let i = 0; i < a.length; i++) {
+        if (mini[0] > args[i]) {
+            mini[0] = args[i];
+        }
+        console.log(mini);
     }
-    
 }
-
-min(3, 6, 5); */
+min(3, 6, 5);
 //b)
 function isEven(c) {
     if (c == 0) {
