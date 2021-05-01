@@ -58,7 +58,10 @@ let s3 = new Student("Lisa", "Müller", 20, 564739);
 //3
 let stud = [s1, s2, s3];
 stud.push(new Student("Bea", "Baum", 22, 341289));
-console.log(stud[0]);
+console.log(stud[0].alter);
+console.log(stud[1].matrikelnummer);
+console.log(stud[2].nachname);
+console.log(stud[3].vorname);
 //4
 function showInfo(s) {
     console.log(s.vorname);
