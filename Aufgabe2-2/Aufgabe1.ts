@@ -60,6 +60,7 @@ class Student {
   this.alter = _alter;
   this.matrikelnummer = _matrikelnummer;
   }
+
   showInfo(): void {
       console.log(this.vorname);
       console.log(this.nachname);

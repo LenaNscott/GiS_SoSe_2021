@@ -19,7 +19,6 @@ function join(..._args) {
 let b = [1, 2, 3, 4];
 let c = [5, 6, 7, 8];
 let d = [9, 10, 11];
-//join(b, c, d);
 //c)
 function split(array, kleinerIndex, großerIndex) {
     if (kleinerIndex < 0 || großerIndex < 0) {

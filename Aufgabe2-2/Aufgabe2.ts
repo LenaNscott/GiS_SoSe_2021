@@ -23,7 +23,6 @@ function join (... _args: number[][]) {
 let b: number[] = [1, 2, 3, 4];
 let c: number[] = [5, 6, 7, 8];
 let d: number[] = [9, 10, 11];
-//join(b, c, d);
 
 //c)
 

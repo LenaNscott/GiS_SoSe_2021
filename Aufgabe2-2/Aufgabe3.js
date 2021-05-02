@@ -2,6 +2,7 @@
 //a)
 let myCanvas = document.getElementById("MyCanvas");
 let context = myCanvas.getContext("2d");
+let path = new Path2D;
 //Himmel
 context.fillStyle = "#00BFFF";
 context.fillRect(0, 0, 500, 500);
@@ -17,7 +18,6 @@ context.lineTo(0, 250);
 context.closePath();
 context.stroke();
 context.fill();
-let path = new Path2D;
 //Baumstamm
 context.beginPath();
 context.fillStyle = "#8B4513";
@@ -57,7 +57,7 @@ context.fillRect(125, 200, 50, 100);
 context.closePath();
 context.stroke();
 context.fill();
-//Wolke
+//Wolken
 context.beginPath();
 context.ellipse(50, 50, 30, 50, Math.PI / 2, 0, 2 * Math.PI);
 context.fillStyle = "white";

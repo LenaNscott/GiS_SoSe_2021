@@ -2,6 +2,7 @@
 
 let myCanvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("MyCanvas");
 let context: CanvasRenderingContext2D = myCanvas.getContext("2d");
+let path: Path2D = new Path2D;
 
 //Himmel
 context.fillStyle = "#00BFFF";
@@ -19,8 +20,6 @@ context.lineTo(0, 250);
 context.closePath();
 context.stroke();
 context.fill();
-
-let path: Path2D = new Path2D;
 
 //Baumstamm
 context.beginPath();
@@ -66,7 +65,7 @@ context.closePath();
 context.stroke();
 context.fill();
 
-//Wolke
+//Wolken
 
 context.beginPath();
 context.ellipse(50, 50, 30, 50, Math.PI / 2, 0, 2 * Math.PI);
@@ -95,35 +94,32 @@ let context2: CanvasRenderingContext2D = mycanvas2.getContext("2d");
 
 class Rechteck {
 
-path2: Path2D = new Path2D;
+    path2: Path2D = new Path2D;
     
-posX: number;
-posY: number;
-sizeX: number;
-sizeY: number;
-color: string;
-bewegungsrichtungX: number;
-bewegungsrichtungY: number;
+    posX: number;
+    posY: number;
+    sizeX: number;
+    sizeY: number;
+    color: string;
+    bewegungsrichtungX: number;
+    bewegungsrichtungY: number;
+
 constructor() {
     this.posX = Math.random() * 100;
     this.posY = Math.random() * 100;
     this.sizeX = Math.random() * 100;
     this.sizeY = Math.random() * 100;
     this.color = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
-    if (Math.random() < 0.5)
-    {
+    if (Math.random() < 0.5) {
         this.bewegungsrichtungX = -1;
     }
-    else
-    {
+    else {
         this.bewegungsrichtungX = 1;
     }
-    if (Math.random() < 0.5)
-    {
+    if (Math.random() < 0.5) {
         this.bewegungsrichtungY = -1;
     }
-    else
-    {
+    else {
         this.bewegungsrichtungY = 1;
     }
     }
@@ -163,7 +159,7 @@ for (const re of rechteckArray) {
 
 function sleep(zeit: number) {
     return new Promise(resolve => setTimeout(resolve, zeit));
-  }
+}
 
 async function TimeOut(){
     for ( let j = 0; j < 100; j++) {
