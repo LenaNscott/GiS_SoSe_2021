@@ -23,11 +23,21 @@ context.fillRect(300, 100, context.canvas.width, 250);
 
 //b)
 
-interface Rechteck {
-    x: number;
-    y: number;
+class Rechteck {
+context2: CanvasRenderingContext2D = canvas.getContext("2d");
+path2: Path2D = new Path2D;
+    
+x: number;
+y: number;
+
+constructor(x: number, y: number) {
+    this.context2.fillRect(0, 0, x, y);
+    }
 
 }
+
+let r1: Rechteck = new Rechteck(200, 400);
+
 
 //c)
 
