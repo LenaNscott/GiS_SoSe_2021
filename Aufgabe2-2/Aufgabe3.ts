@@ -89,8 +89,8 @@ context.stroke();
 context.fill();
 
 //b)
-let mycanvas2: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById ("MyCanvas2"); 
-let context2: CanvasRenderingContext2D = mycanvas2.getContext("2d");
+let myCanvas2: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById ("MyCanvas2"); 
+let context2: CanvasRenderingContext2D = myCanvas2.getContext("2d");
 
 class Rechteck {
 
@@ -104,55 +104,57 @@ class Rechteck {
     bewegungsrichtungX: number;
     bewegungsrichtungY: number;
 
-constructor() {
-    this.posX = Math.random() * 100;
-    this.posY = Math.random() * 100;
-    this.sizeX = Math.random() * 100;
-    this.sizeY = Math.random() * 100;
-    this.color = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
-    if (Math.random() < 0.5) {
+    constructor() {
+        this.posX = Math.random() * 100;
+        this.posY = Math.random() * 100;
+        this.sizeX = Math.random() * 100;
+        this.sizeY = Math.random() * 100;
+        this.color = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+        if (Math.random() < 0.5) {
         this.bewegungsrichtungX = -1;
-    }
-    else {
+        }
+        else {
         this.bewegungsrichtungX = 1;
-    }
-    if (Math.random() < 0.5) {
+        }
+        if (Math.random() < 0.5) {
         this.bewegungsrichtungY = -1;
-    }
-    else {
+        }
+        else {
         this.bewegungsrichtungY = 1;
+        }
     }
+
+    //d)
+
+    drawRect(ctx: CanvasRenderingContext2D): void {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.posX, this.posY, this.sizeX, this.sizeY);
     }
 
 }
 
 //c)
 
-function createRect() {
+function createRect(): Rechteck {
     let r1: Rechteck = new Rechteck ();
     return r1;
 }
 
-
-//d)
-
-function drawRect(r1: Rechteck, ctx: CanvasRenderingContext2D) {
-    ctx.fillStyle = r1.color;
-    ctx.fillRect(r1.posX, r1.posY, r1.sizeX, r1.sizeY);
-}
-
-drawRect(createRect(), context2);
+let r1: Rechteck = createRect();
+r1.drawRect(context2);
 
 //e)
 
 let rechteckArray: Rechteck[] = [];
+let r2: Rechteck = createRect();
+r2.drawRect(context2);
 
-for (let i = 0; i < 10; i++) {
+for (let i: number = 0; i < 10; i++) {
     rechteckArray.push(createRect());
 }
 
 for (const re of rechteckArray) {
-    drawRect(re, context2);
+    re.drawRect(context2);
 }
 
 //f)
@@ -161,16 +163,16 @@ function sleep(zeit: number) {
     return new Promise(resolve => setTimeout(resolve, zeit));
 }
 
-async function TimeOut(){
-    for ( let j = 0; j < 100; j++) {
-    await sleep(500);
-    context2.clearRect(0, 0, mycanvas2.width, mycanvas2.height);
-    for (let i = 0; i < rechteckArray.length; i++) {
-        rechteckArray[i].posX += 5 * rechteckArray[i].bewegungsrichtungX;
-        rechteckArray[i].posY += 5 * rechteckArray[i].bewegungsrichtungY;
-        drawRect(rechteckArray[i], context2);
+async function timeOut() {
+    for ( let j: number = 0; j < 100; j++) {
+        await sleep(500);
+        context2.clearRect(0, 0, myCanvas2.width, myCanvas2.height);
+        for (let i: number = 0; i < rechteckArray.length; i++) {
+            rechteckArray[i].posX += 5 * rechteckArray[i].bewegungsrichtungX;
+            rechteckArray[i].posY += 5 * rechteckArray[i].bewegungsrichtungY;
+            rechteckArray[i].drawRect(context2);
+        }
     }
 }
-}
 
-TimeOut();
+timeOut();

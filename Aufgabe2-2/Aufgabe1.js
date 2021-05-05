@@ -7,20 +7,21 @@ function min(...args) {
             mini = args[i];
         }
     }
-    console.log(mini);
+    return (mini);
 }
 min(3, 6, 5, 1);
 //b)
 function isEven(c) {
     if (c == 0) {
-        console.log(true);
+        return (true);
     }
     else if (c == 1) {
-        console.log(false);
+        return (false);
     }
     else {
         c -= 2;
         isEven(c);
+        return (false);
     }
 }
 isEven(50);
@@ -62,15 +63,7 @@ console.log(stud[0].alter);
 console.log(stud[1].matrikelnummer);
 console.log(stud[2].nachname);
 console.log(stud[3].vorname);
-//4
-function showInfo(s) {
-    console.log(s.vorname);
-    console.log(s.nachname);
-    console.log(s.matrikelnummer);
-    console.log(s.alter);
+for (let i = 0; i < stud.length; i++) {
+    stud[i].showInfo();
 }
-showInfo(stud[0]);
-showInfo(stud[1]);
-showInfo(stud[2]);
-showInfo(stud[3]);
 //# sourceMappingURL=Aufgabe1.js.map

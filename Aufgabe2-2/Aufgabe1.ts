@@ -1,33 +1,34 @@
 //a)
 
-function min(... args: number[]) {
+function min(... args: number[]): number {
     let mini: number = args[0];
     
-    for (let i = 1 ; i < args.length ; i++) {
+    for (let i: number = 1 ; i < args.length ; i++) {
       if (mini > args[i]) {
           mini = args[i];
       }  
      
     }
-    console.log(mini);
+    return(mini);
 }
 
 min(3, 6, 5, 1);
 
 //b)
 
-function isEven (c: number) {
+function isEven(c: number): boolean {
   if (c == 0) {
-    console.log(true);
+    return(true);
   }
 
   else if (c == 1) {
-    console.log(false);
+    return(false);
   }
 
   else {
     c -= 2;
     isEven(c);
+    return(false);
   }
 }
 
@@ -54,6 +55,7 @@ class Student {
   nachname: string;
   alter: number;
   matrikelnummer: number;
+  
   constructor (_vorname: string, _nachname: string, _alter: number, _matrikelnummer: number) {
   this.vorname = _vorname;
   this.nachname = _nachname;
@@ -82,16 +84,10 @@ console.log(stud[0].alter);
 console.log(stud[1].matrikelnummer); 
 console.log(stud[2].nachname); 
 console.log(stud[3].vorname); 
-//4
-function showInfo(s: Student) {
-  console.log(s.vorname);
-  console.log(s.nachname);
-  console.log(s.matrikelnummer);
-  console.log(s.alter);
+
+
+for (let i: number = 0; i < stud.length; i++) {
+  stud[i].showInfo();
 }
 
-showInfo(stud[0]);
-showInfo(stud[1]);
-showInfo(stud[2]);
-showInfo(stud[3]);
 

@@ -77,8 +77,8 @@ context.strokeStyle = "white";
 context.stroke();
 context.fill();
 //b)
-let mycanvas2 = document.getElementById("MyCanvas2");
-let context2 = mycanvas2.getContext("2d");
+let myCanvas2 = document.getElementById("MyCanvas2");
+let context2 = myCanvas2.getContext("2d");
 class Rechteck {
     constructor() {
         this.path2 = new Path2D;
@@ -100,40 +100,43 @@ class Rechteck {
             this.bewegungsrichtungY = 1;
         }
     }
+    //d)
+    drawRect(ctx) {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.posX, this.posY, this.sizeX, this.sizeY);
+    }
 }
 //c)
 function createRect() {
     let r1 = new Rechteck();
     return r1;
 }
-//d)
-function drawRect(r1, ctx) {
-    ctx.fillStyle = r1.color;
-    ctx.fillRect(r1.posX, r1.posY, r1.sizeX, r1.sizeY);
-}
-drawRect(createRect(), context2);
+let r1 = createRect();
+r1.drawRect(context2);
 //e)
 let rechteckArray = [];
+let r2 = createRect();
+r2.drawRect(context2);
 for (let i = 0; i < 10; i++) {
     rechteckArray.push(createRect());
 }
 for (const re of rechteckArray) {
-    drawRect(re, context2);
+    re.drawRect(context2);
 }
 //f)
 function sleep(zeit) {
     return new Promise(resolve => setTimeout(resolve, zeit));
 }
-async function TimeOut() {
+async function timeOut() {
     for (let j = 0; j < 100; j++) {
         await sleep(500);
-        context2.clearRect(0, 0, mycanvas2.width, mycanvas2.height);
+        context2.clearRect(0, 0, myCanvas2.width, myCanvas2.height);
         for (let i = 0; i < rechteckArray.length; i++) {
             rechteckArray[i].posX += 5 * rechteckArray[i].bewegungsrichtungX;
             rechteckArray[i].posY += 5 * rechteckArray[i].bewegungsrichtungY;
-            drawRect(rechteckArray[i], context2);
+            rechteckArray[i].drawRect(context2);
         }
     }
 }
-TimeOut();
+timeOut();
 //# sourceMappingURL=Aufgabe3.js.map
