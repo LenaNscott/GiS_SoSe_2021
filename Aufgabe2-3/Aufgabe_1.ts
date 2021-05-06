@@ -1,6 +1,20 @@
 
-let button: HTMLDivElement = document.querySelector("#rechteck");
+let button: HTMLElement = document.querySelector("#rechteck");
 button = document.createElement("div");
+button.id = "mehrRechtecke";
+button.onclick = function () {MouseEvent}; 
+//button.addEventListener = document.addEventListener("click", handleClick);
+
+function handleClick(_event: Event): void {
+    
+}
+namespace L2_3_Load {
+    window.addEventListener("load", handleLoad);
+
+    function  handleLoad(_event: Event): void {
+        console.log(_event);
+    }
+}
 
 let r1: HTMLDivElement = document.querySelector("#rechteck");
 r1 = document.createElement("div"); 

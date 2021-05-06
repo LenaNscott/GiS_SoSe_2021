@@ -124,19 +124,14 @@ for (const re of rechteckArray) {
     re.drawRect(context2);
 }
 //f)
-function sleep(zeit) {
-    return new Promise(resolve => setTimeout(resolve, zeit));
-}
 async function timeOut() {
-    for (let j = 0; j < 100; j++) {
-        await sleep(500);
-        context2.clearRect(0, 0, myCanvas2.width, myCanvas2.height);
-        for (let i = 0; i < rechteckArray.length; i++) {
-            rechteckArray[i].posX += 5 * rechteckArray[i].bewegungsrichtungX;
-            rechteckArray[i].posY += 5 * rechteckArray[i].bewegungsrichtungY;
-            rechteckArray[i].drawRect(context2);
-        }
+    context2.clearRect(0, 0, myCanvas2.width, myCanvas2.height);
+    for (let i = 0; i < rechteckArray.length; i++) {
+        rechteckArray[i].posX += 5 * rechteckArray[i].bewegungsrichtungX;
+        rechteckArray[i].posY += 5 * rechteckArray[i].bewegungsrichtungY;
+        rechteckArray[i].drawRect(context2);
     }
+    setTimeout(timeOut, 50);
 }
 timeOut();
 //# sourceMappingURL=Aufgabe3.js.map

@@ -159,20 +159,16 @@ for (const re of rechteckArray) {
 
 //f)
 
-function sleep(zeit: number) {
-    return new Promise(resolve => setTimeout(resolve, zeit));
-}
 
 async function timeOut() {
-    for ( let j: number = 0; j < 100; j++) {
-        await sleep(500);
+    
         context2.clearRect(0, 0, myCanvas2.width, myCanvas2.height);
         for (let i: number = 0; i < rechteckArray.length; i++) {
             rechteckArray[i].posX += 5 * rechteckArray[i].bewegungsrichtungX;
             rechteckArray[i].posY += 5 * rechteckArray[i].bewegungsrichtungY;
             rechteckArray[i].drawRect(context2);
         }
-    }
+        setTimeout(timeOut, 50);
 }
 
 timeOut();

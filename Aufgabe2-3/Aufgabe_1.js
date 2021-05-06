@@ -1,6 +1,18 @@
 "use strict";
 let button = document.querySelector("#rechteck");
 button = document.createElement("div");
+button.id = "mehrRechtecke";
+button.onclick = function () { MouseEvent; };
+//button.addEventListener = document.addEventListener("click", handleClick);
+function handleClick(_event) {
+}
+var L2_3_Load;
+(function (L2_3_Load) {
+    window.addEventListener("load", handleLoad);
+    function handleLoad(_event) {
+        console.log(_event);
+    }
+})(L2_3_Load || (L2_3_Load = {}));
 let r1 = document.querySelector("#rechteck");
 r1 = document.createElement("div");
 r1.dataset.name = "rechteck";
