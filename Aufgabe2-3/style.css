@@ -1,0 +1,82 @@
+.menu {
+    overflow: hidden;
+    background-color: black;
+    margin-left: 72%;
+    margin-right: 30%;
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+    display: inline;
+}
+
+.menu a {
+    float: right;
+    display: table;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    border-right: 1px solid #f2f2f2;
+    background-color: black;
+}
+
+a.eins {  
+    color:aqua; 
+}
+
+a:hover {
+    color: #8FBC8F; 
+}
+
+.seite {
+    color: red;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 30px;
+}
+
+#index {
+    color: red;
+}
+
+body {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+
+h1{
+    font-size: 70px;
+    text-align: center;
+    padding-top: 30px;
+    color:#8FBC8F;
+    background-image: url(Medien/baby-animals-2.jpg);
+    width: 100%;
+    background-position: center;
+}
+
+button.button {
+    height: auto;
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    background-color: gray;
+    color: white;
+}
+
+

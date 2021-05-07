@@ -27,9 +27,9 @@ let _koepfe;
 let _ruempfe;
 let _beine;
 let _auswahl;
-function auswahlSpeichernKopf(k) {
+function auswahlSpeichernKopf(_k) {
     for (let i = 0; i < _koepfe.length; i++) {
-        if (k == _koepfe[i]) {
+        if (_k == _koepfe[i]) {
             return i;
         }
         else {

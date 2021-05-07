@@ -52,9 +52,11 @@ let _beine: Bein[];
 
 let _auswahl: [][][];
 
-function auswahlSpeichernKopf(k: Kopf): number {
+
+
+function auswahlSpeichernKopf(_k: Kopf): number {
     for (let i = 0; i < _koepfe.length; i++) {
-        if (k == _koepfe[i]) {
+        if (_k == _koepfe[i]) {
             return i;
         }
 
