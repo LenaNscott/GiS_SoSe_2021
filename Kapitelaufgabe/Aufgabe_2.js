@@ -1,38 +1,53 @@
 "use strict";
 //a
-//B) 
-let _koepfe;
-let _ruempfe;
-let _beine;
-let _auswahl;
-function auswahlSpeichernKopf(_k) {
-    for (let i = 0; i < _koepfe.length; i++) {
-        if (_k == _koepfe[i]) {
-            return i;
-        }
-        else {
-            console.log("Fehler");
-        }
+let auswahl = { kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "") };
+let zurueck = document.createElement("BUTTON");
+zurueck.style.width = "200px";
+zurueck.style.height = "30px";
+zurueck.innerHTML = "Vorheriges Bild";
+document.body.appendChild(zurueck);
+zurueck.addEventListener("click", function () { Zurueck(); });
+let vor = document.createElement("BUTTON");
+vor.style.width = "200px";
+vor.style.height = "30px";
+vor.innerHTML = "Nächstes Bild";
+document.body.appendChild(vor);
+vor.addEventListener("click", function () { Weiter(); });
+let imgCtr = 0;
+let bild2 = document.createElement("img");
+bild2.width = 400;
+bild2.height = 400;
+bild2.style.left = "575px";
+bild2.src = auswahlmoeglichkeiten.kopf[imgCtr].bild;
+bild2.style.position = "absolute";
+bild2.style.top = "270px";
+document.body.appendChild(bild2);
+function Weiter() {
+    if (imgCtr < (auswahlmoeglichkeiten.kopf.length - 1))
+        imgCtr += 1;
+    else {
+        imgCtr = 0;
     }
+    bild2.src = auswahlmoeglichkeiten.kopf[imgCtr].bild;
 }
-function auswahlSpeichernRumpf(k) {
-    for (let i = 0; i < _ruempfe.length; i++) {
-        if (k == _ruempfe[i]) {
-            return i;
-        }
-        else {
-            console.log("Fehler");
-        }
-    }
+function Zurueck() {
+    if (imgCtr > 0)
+        imgCtr -= 1;
+    else
+        imgCtr = auswahlmoeglichkeiten.kopf.length - 1;
+    bild2.src = auswahlmoeglichkeiten.kopf[imgCtr].bild;
 }
-function auswahlSpeichernBein(k) {
-    for (let i = 0; i < _beine.length; i++) {
-        if (k == _beine[i]) {
-            return i;
-        }
-        else {
-            console.log("Fehler");
-        }
-    }
+let auswaelen = document.createElement("BUTTON");
+auswaelen.style.width = "200px";
+auswaelen.style.height = "30px";
+auswaelen.style.top = "675px";
+auswaelen.innerHTML = "Auswählen";
+auswaelen.style.left = "680px";
+auswaelen.style.position = "absolute";
+document.body.appendChild(auswaelen);
+auswaelen.addEventListener("click", function () { Auswaehlen(); });
+function Auswaehlen() {
+    auswahl.kopf = auswahlmoeglichkeiten.kopf[imgCtr];
+    console.log(auswahl);
 }
 //# sourceMappingURL=Aufgabe_2.js.map

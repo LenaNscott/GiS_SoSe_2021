@@ -1,19 +1,12 @@
 // Nr. 2c)
-let auswahl: Auswahlmoeglichkeiten;
 
-let vogelK: Kopf;
-vogelK.essen = "Würmer";
-vogelK.farbe = "braun";
-vogelK.kopfform = "rund";
-vogelK.name = "Eule";
-vogelK.preis = 60;
-vogelK.bild = "Medien/eule.jpg"; 
 
-let waschbaerK: Kopf;
-waschbaerK.essen = "Müll";
-waschbaerK.farbe = "dunkel Braun";
-waschbaerK.kopfform = "oval";
-waschbaerK.name = "Waschbär";
-waschbaerK.preis = 20;
-waschbaerK.bild = "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg";
+let auswahlmoeglichkeiten: Auswahlmoeglichkeiten = {kopf: [], koerper: [], beine: []};
+let kopf1: Kopf = new Kopf("Würmer", "braun", "rund", "Eule", 60, "Medien/eule.jpg");
+auswahlmoeglichkeiten.kopf.push(new Kopf("Würmer", "braun", "rund", "Eule", 60, "Medien/eule.jpg"));
+auswahlmoeglichkeiten.kopf.push(new Kopf("Müll", "dunkelbraun", "oval", "Waschbär", 20, "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg"));
+auswahlmoeglichkeiten.kopf.push(new Kopf("Karotte", "länglich", "Pferd", "braun", 500, "Medien/pferd.jpg"));
+
+
+
 

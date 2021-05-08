@@ -1,18 +1,8 @@
 "use strict";
 // Nr. 2c)
-let auswahl;
-let vogelK;
-vogelK.essen = "Würmer";
-vogelK.farbe = "braun";
-vogelK.kopfform = "rund";
-vogelK.name = "Eule";
-vogelK.preis = 60;
-vogelK.bild = "Medien/eule.jpg";
-let waschbaerK;
-waschbaerK.essen = "Müll";
-waschbaerK.farbe = "dunkel Braun";
-waschbaerK.kopfform = "oval";
-waschbaerK.name = "Waschbär";
-waschbaerK.preis = 20;
-waschbaerK.bild = "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg";
+let auswahlmoeglichkeiten = { kopf: [], koerper: [], beine: [] };
+let kopf1 = new Kopf("Würmer", "braun", "rund", "Eule", 60, "Medien/eule.jpg");
+auswahlmoeglichkeiten.kopf.push(new Kopf("Würmer", "braun", "rund", "Eule", 60, "Medien/eule.jpg"));
+auswahlmoeglichkeiten.kopf.push(new Kopf("Müll", "dunkelbraun", "oval", "Waschbär", 20, "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg"));
+auswahlmoeglichkeiten.kopf.push(new Kopf("Karotte", "länglich", "Pferd", "braun", 500, "Medien/pferd.jpg"));
 //# sourceMappingURL=data.js.map

@@ -51,3 +51,9 @@ interface Auswahlmoeglichkeiten {
     koerper: Koeper[];
     beine: Beine[];
 }
+
+interface Auswahl {
+    kopf: Kopf;
+    koerper: Koeper;
+    beine: Beine;
+}
