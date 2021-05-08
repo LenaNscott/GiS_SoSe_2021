@@ -2,16 +2,22 @@
 let auswahl: Auswahl = {kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "")};
 
 let zurueck: HTMLElement = document.createElement("BUTTON");
-zurueck.style.width = "200px";
+zurueck.style.width = "150px";
 zurueck.style.height = "30px";
-zurueck.innerHTML = "Vorheriges Bild";
+zurueck.innerHTML = "Vorheriges Bild ";
+zurueck.style.position = "absolute";
+zurueck.style.top = "230px";
+zurueck.style.left = "575px";
 document.body.appendChild(zurueck);
 zurueck.addEventListener("click" , function() {Zurueck(); } );
 
 let vor: HTMLElement = document.createElement("BUTTON");
-vor.style.width = "200px";
+vor.style.width = "150px";
 vor.style.height = "30px";
 vor.innerHTML = "Nächstes Bild";
+vor.style.position = "absolute";
+vor.style.top = "230px";
+vor.style.left = "825px";
 document.body.appendChild(vor);
 vor.addEventListener("click", function() {Weiter(); });
 
