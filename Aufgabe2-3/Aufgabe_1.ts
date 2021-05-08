@@ -1,14 +1,14 @@
 let x = document.createElement("BUTTON");
 x.style.width = "200px";
 x.style.height = "30px";
-x.innerHTML = "Button 1";
+x.innerHTML = "+ Rechteck";
 document.body.appendChild(x);
 x.addEventListener("click" , function() {newRechteck()} );
 
 let y = document.createElement("BUTTON");
 y.style.width = "200px";
 y.style.height = "30px";
-y.innerHTML = "Button 2";
+y.innerHTML = "- Rechtecke";
 document.body.appendChild(y);
 y.addEventListener("click", function() {
     let x: HTMLCollection = document.getElementsByTagName("div");
