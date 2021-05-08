@@ -1,43 +1,58 @@
+let x = document.createElement("BUTTON");
+x.style.width = "200px";
+x.style.height = "30px";
+x.innerHTML = "Button 1";
+document.body.appendChild(x);
+x.addEventListener("click" , function() {newRechteck()} );
 
-let button: HTMLElement = document.querySelector("#rechteck");
-button = document.createElement("div");
-button.id = "mehrRechtecke";
-button.onclick = function () {MouseEvent}; 
-//button.addEventListener = document.addEventListener("click", handleClick);
-
-function handleClick(_event: Event): void {
-    
-}
-namespace L2_3_Load {
-    window.addEventListener("load", handleLoad);
-
-    function  handleLoad(_event: Event): void {
-        console.log(_event);
+let y = document.createElement("BUTTON");
+y.style.width = "200px";
+y.style.height = "30px";
+y.innerHTML = "Button 2";
+document.body.appendChild(y);
+y.addEventListener("click", function() {
+    let x: HTMLCollection = document.getElementsByTagName("div");
+    for (let i: number = 0; i < x.length; i++ )
+    {
+        document.body.removeChild(x[i]);
     }
+   }
+ );
+
+
+/*let r1 = document.createElement("div");
+r1.style.backgroundColor = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+r1.style.position = "absolute";
+r1.style.left = 300 + "px";
+r1.style.top  = 300 + "px";
+r1.style.width = "100px";
+r1.style.height = "100px";
+r1.style.visibility = "visible";
+document.body.appendChild(r1);*/
+
+
+for (let i = 0; i < 10; i++) {
+    let r = document.createElement("div");
+    r.style.backgroundColor = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+    r.style.position = "absolute";
+    r.style.left = Math.random() * 200 + "px";
+    r.style.top  = Math.random() * 200 + 50 + "px";
+    r.style.width = Math.random() * 200 + "px";
+    r.style.height = Math.random() * 200 + "px";
+    r.style.visibility = "visible";
+    document.body.appendChild(r);
 }
 
-let r1: HTMLDivElement = document.querySelector("#rechteck");
-r1 = document.createElement("div"); 
-r1.dataset.name = "rechteck"; 
-r1.id = "neueRechtecke";
-r1.style.color = farbe();
-r1.style.height = randomZahl ();
-r1.style.width = randomZahl();
-r1.style.position = randomZahl();
-console.log(r1);
-
-function randomZahl(): string {
-    let r: number;
-    let zahl: string = " ";
-    r = Math.random() * 100;
-    zahl = r.toString();
-    return zahl;
-}
-
-function farbe(): string {
-    let f: string;
-    f = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
-    return f;
+function newRechteck() {
+    let r = document.createElement("div");
+    r.style.backgroundColor = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+    r.style.position = "absolute";
+    r.style.left = Math.random() * 200 + "px";
+    r.style.top  = Math.random() * 200 + 50 + "px";
+    r.style.width = Math.random() * 200 + "px";
+    r.style.height = Math.random() * 200 + "px";
+    r.style.visibility = "visible";
+    document.body.appendChild(r);
 }
 
 
