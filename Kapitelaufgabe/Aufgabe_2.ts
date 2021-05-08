@@ -1,48 +1,6 @@
 //a
 
-button.addEventListener; 
 
-class Kopf {
-
-    _art: string;
-    _farbe: string;
-    _preis: number;
-
-    constructor() {
-        this._art = this._art;
-        this._farbe = this._farbe;
-        this._preis = this._preis;
-    }
-
-}
-
-class Rumpf {
-
-    _art: string;
-    _farbe: string;
-    _preis: number;
-
-    constructor() {
-        this._art = this._art;
-        this._farbe = this._farbe;
-        this._preis = this._preis;
-    }
-
-}
-
-class Bein {
-
-    _art: string;
-    _farbe: string;
-    _preis: number;
-
-    constructor() {
-        this._art = this._art;
-        this._farbe = this._farbe;
-        this._preis = this._preis;
-    }
-
-}
 
 //B) 
 

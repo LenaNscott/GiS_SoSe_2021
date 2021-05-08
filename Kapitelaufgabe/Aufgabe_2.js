@@ -1,27 +1,5 @@
 "use strict";
 //a
-button.addEventListener;
-class Kopf {
-    constructor() {
-        this._art = this._art;
-        this._farbe = this._farbe;
-        this._preis = this._preis;
-    }
-}
-class Rumpf {
-    constructor() {
-        this._art = this._art;
-        this._farbe = this._farbe;
-        this._preis = this._preis;
-    }
-}
-class Bein {
-    constructor() {
-        this._art = this._art;
-        this._farbe = this._farbe;
-        this._preis = this._preis;
-    }
-}
 //B) 
 let _koepfe;
 let _ruempfe;
