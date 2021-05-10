@@ -1,11 +1,12 @@
-let x = document.createElement("BUTTON");
+
+let x: HTMLElement = document.createElement("BUTTON");
 x.style.width = "200px";
 x.style.height = "30px";
 x.innerHTML = "+ Rechteck";
 document.body.appendChild(x);
-x.addEventListener("click" , function() {newRechteck()} );
+x.addEventListener("click" , function() {newRechteck(); } );
 
-let y = document.createElement("BUTTON");
+let y: HTMLElement = document.createElement("BUTTON");
 y.style.width = "200px";
 y.style.height = "30px";
 y.innerHTML = "- Rechtecke";
@@ -13,9 +14,7 @@ document.body.appendChild(y);
 y.addEventListener("click", function() {
     let x: HTMLCollection = document.getElementsByTagName("div");
     for (let i: number = 0; i < x.length; i++ )
-    {
         document.body.removeChild(x[i]);
-    }
    }
  );
 
@@ -32,7 +31,7 @@ document.body.appendChild(r1);*/
 
 
 for (let i = 0; i < 10; i++) {
-    let r = document.createElement("div");
+    let r: HTMLElement = document.createElement("div");
     r.style.backgroundColor = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
     r.style.position = "absolute";
     r.style.left = Math.random() * 200 + "px";
@@ -44,7 +43,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 function newRechteck() {
-    let r = document.createElement("div");
+    let r: HTMLElement = document.createElement("div");
     r.style.backgroundColor = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
     r.style.position = "absolute";
     r.style.left = Math.random() * 200 + "px";
