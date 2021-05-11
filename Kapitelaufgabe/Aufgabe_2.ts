@@ -59,11 +59,23 @@ auswaelen.innerHTML = "Auswählen";
 auswaelen.style.left = "680px";
 auswaelen.style.position = "absolute";
 document.body.appendChild(auswaelen);
-auswaelen.addEventListener("click" , function() {Auswaehlen(); } );
+auswaelen.addEventListener("click" , function() {Get(); } );
 
-function Auswaehlen(): void {
+/* function Auswaehlen(): void {
 
         auswahl.kopf = auswahlmoeglichkeiten.kopf[imgCtr];
-        console.log(auswahl);
-}
+        
+        document.cookie = "auswahl";
+        let c: string = document.cookie;
+        console.log(c);
+   
+} */
 
+function Get(): string {
+    let a: string = "";
+    auswahl.kopf = auswahlmoeglichkeiten.kopf[imgCtr];
+    document.cookie = "auswahl";
+    let c: string = document.cookie;
+    console.log(document.cookie);
+    return a;
+}
