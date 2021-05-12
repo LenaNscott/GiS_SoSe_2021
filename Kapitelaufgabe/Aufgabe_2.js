@@ -9,7 +9,7 @@ zurueck.style.position = "absolute";
 zurueck.style.top = "230px";
 zurueck.style.left = "575px";
 document.body.appendChild(zurueck);
-zurueck.addEventListener("click", function () { Zurueck(); });
+zurueck.addEventListener("click", zurueckKlicken);
 let vor = document.createElement("BUTTON");
 vor.style.width = "150px";
 vor.style.height = "30px";
@@ -18,7 +18,7 @@ vor.style.position = "absolute";
 vor.style.top = "230px";
 vor.style.left = "825px";
 document.body.appendChild(vor);
-vor.addEventListener("click", function () { Weiter(); });
+vor.addEventListener("click", weiter);
 let imgCtr = 0;
 let bild2 = document.createElement("img");
 bild2.width = 400;
@@ -28,7 +28,7 @@ bild2.src = auswahlmoeglichkeiten.kopf[imgCtr].bild;
 bild2.style.position = "absolute";
 bild2.style.top = "270px";
 document.body.appendChild(bild2);
-function Weiter() {
+function weiter() {
     if (imgCtr < (auswahlmoeglichkeiten.kopf.length - 1))
         imgCtr += 1;
     else {
@@ -36,7 +36,7 @@ function Weiter() {
     }
     bild2.src = auswahlmoeglichkeiten.kopf[imgCtr].bild;
 }
-function Zurueck() {
+function zurueckKlicken() {
     if (imgCtr > 0)
         imgCtr -= 1;
     else
@@ -51,22 +51,10 @@ auswaelen.innerHTML = "Auswählen";
 auswaelen.style.left = "680px";
 auswaelen.style.position = "absolute";
 document.body.appendChild(auswaelen);
-auswaelen.addEventListener("click", function () { Get(); });
-/* function Auswaehlen(): void {
-
-        auswahl.kopf = auswahlmoeglichkeiten.kopf[imgCtr];
-        
-        document.cookie = "auswahl";
-        let c: string = document.cookie;
-        console.log(c);
-   
-} */
-function Get() {
-    let a = "";
+auswaelen.addEventListener("click", auswaehlen);
+function auswaehlen() {
     auswahl.kopf = auswahlmoeglichkeiten.kopf[imgCtr];
-    document.cookie = "auswahl";
-    let c = document.cookie;
-    console.log(document.cookie);
-    return a;
+    console.log(auswahl);
 }
+localStorage.setItem(auswahlmoeglichkeiten.kopf[imgCtr].bild, "auswahlK");
 //# sourceMappingURL=Aufgabe_2.js.map

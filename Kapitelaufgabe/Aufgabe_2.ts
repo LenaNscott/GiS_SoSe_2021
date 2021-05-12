@@ -9,7 +9,7 @@ zurueck.style.position = "absolute";
 zurueck.style.top = "230px";
 zurueck.style.left = "575px";
 document.body.appendChild(zurueck);
-zurueck.addEventListener("click" , function() {Zurueck(); } );
+zurueck.addEventListener("click" , zurueckKlicken);
 
 let vor: HTMLElement = document.createElement("BUTTON");
 vor.style.width = "150px";
@@ -19,7 +19,7 @@ vor.style.position = "absolute";
 vor.style.top = "230px";
 vor.style.left = "825px";
 document.body.appendChild(vor);
-vor.addEventListener("click", function() {Weiter(); });
+vor.addEventListener("click", weiter);
 
 let imgCtr: number = 0;
 
@@ -33,7 +33,7 @@ bild2.style.top = "270px";
 document.body.appendChild(bild2);
 
 
-function Weiter() {
+function weiter() {
     if (imgCtr < (auswahlmoeglichkeiten.kopf.length - 1))
         imgCtr += 1;
     else {
@@ -43,7 +43,7 @@ function Weiter() {
     bild2.src = auswahlmoeglichkeiten.kopf[imgCtr].bild;
 }
 
-function Zurueck() {
+function zurueckKlicken() {
     if (imgCtr > 0)
         imgCtr -= 1;    
     else
@@ -59,23 +59,13 @@ auswaelen.innerHTML = "Auswählen";
 auswaelen.style.left = "680px";
 auswaelen.style.position = "absolute";
 document.body.appendChild(auswaelen);
-auswaelen.addEventListener("click" , function() {Get(); } );
+auswaelen.addEventListener("click" , auswaehlen);
 
-/* function Auswaehlen(): void {
+function auswaehlen(): void {
 
         auswahl.kopf = auswahlmoeglichkeiten.kopf[imgCtr];
-        
-        document.cookie = "auswahl";
-        let c: string = document.cookie;
-        console.log(c);
+        console.log(auswahl);
    
-} */
-
-function Get(): string {
-    let a: string = "";
-    auswahl.kopf = auswahlmoeglichkeiten.kopf[imgCtr];
-    document.cookie = "auswahl";
-    let c: string = document.cookie;
-    console.log(document.cookie);
-    return a;
 }
+
+localStorage.setItem(auswahlmoeglichkeiten.kopf[imgCtr].bild, "auswahlK");
