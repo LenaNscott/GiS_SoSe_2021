@@ -1,5 +1,4 @@
 //a
-let auswahl: Auswahl = {kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "")};
 
 let zurueck: HTMLElement = document.createElement("BUTTON");
 zurueck.style.width = "150px";
@@ -68,5 +67,3 @@ function auswaehlenKopf(): void {
    
 }
 
-document.cookie = JSON.stringify(auswahl);
-let cookiesAuswahl: string = document.cookie;

@@ -1,6 +1,5 @@
 "use strict";
 //a
-let auswahl = { kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "") };
 let zurueck = document.createElement("BUTTON");
 zurueck.style.width = "150px";
 zurueck.style.height = "30px";
@@ -56,6 +55,4 @@ function auswaehlenKopf() {
     auswahl.kopf = JSON.parse(auswahlmoeglichkeiten.kopf[imgCtr]);
     console.log(auswahl.kopf);
 }
-document.cookie = JSON.stringify(auswahl);
-let cookiesAuswahl = document.cookie;
 //# sourceMappingURL=auswahlKopf.js.map

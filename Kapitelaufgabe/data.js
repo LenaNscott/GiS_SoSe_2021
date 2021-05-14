@@ -1,5 +1,6 @@
 "use strict";
 // Nr. 2c)
+let auswahl = { kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "") };
 let auswahlmoeglichkeiten = { kopf: [], koerper: [], beine: [] };
 let euleKJSON = JSON.stringify(new Kopf("Würmer", "braun", "rund", "Eule", 60, "Medien/eule.jpg"));
 let waschbaerKJSON = JSON.stringify(new Kopf("Müll", "dunkelbraun", "oval", "Waschbär", 20, "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg"));
@@ -13,4 +14,6 @@ let elefantJSON = JSON.stringify(new Beine(4, "Elefant", "grau", 30, "Medien/ele
 let huhnJSON = JSON.stringify(new Beine(2, "Huhn", "gelb", 10, "Medien/huhn_beine.jpg"));
 let katzeJSON = JSON.stringify(new Beine(4, "Katze", "gemischt", 50, "Medien/katzen_beine.jpg"));
 auswahlmoeglichkeiten.beine.push(elefantJSON, huhnJSON, katzeJSON);
+document.cookie = JSON.stringify(auswahl);
+let cookiesAuswahl = document.cookie;
 //# sourceMappingURL=data.js.map
