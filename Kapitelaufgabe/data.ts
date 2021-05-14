@@ -8,13 +8,16 @@ let euleKJSON: string = JSON.stringify(new Kopf("Würmer", "braun", "rund", "Eul
 let waschbaerKJSON: string = JSON.stringify(new Kopf("Müll", "dunkelbraun", "oval", "Waschbär", 20, "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg"));
 let pferdKJSON: string = JSON.stringify(new Kopf("Karotte", "länglich", "Pferd", "braun", 500, "Medien/pferd.jpg"));
 
-let euleKObj: Kopf = JSON.parse(euleKJSON);
-let waschbaerKObj: Kopf = JSON.parse(waschbaerKJSON);
-let pferdKObjt: Kopf = JSON.parse(pferdKJSON);
+auswahlmoeglichkeiten.kopf.push(euleKJSON, waschbaerKJSON, pferdKJSON);
 
-let euleK: Kopf = new Kopf (euleKObj.essen, euleKObj.kopfform, euleKObj.farbe, euleKObj.name, euleKObj.preis, euleKObj.bild);
-let waschbaerK: Kopf = new Kopf(waschbaerKObj.essen, waschbaerKObj.farbe,  waschbaerKObj.kopfform, waschbaerKObj.name, waschbaerKObj.preis, waschbaerKObj.bild);
-let pferdK: Kopf = new Kopf(pferdKObjt.essen, pferdKObjt.kopfform, pferdKObjt.name, pferdKObjt.farbe, pferdKObjt.preis, pferdKObjt.bild);
+let baerJSON: string = JSON.stringify(new Koeper("rund", "Bär", "hellbraun", 30, "Medien/bär_koerper.jpg"));
+let lamaJSON: string = JSON.stringify(new Koeper("mollig", "Lama", "hell", 40, "Medien/lama_koerper.jpg"));
+let eisbaerJSON: string = JSON.stringify(new Koeper("fett", "Eisbär", "weiß", 70, "Medien/eisbaer_koerper.jpg"));
 
-auswahlmoeglichkeiten.kopf.push(euleK, waschbaerK, pferdK);
+auswahlmoeglichkeiten.koerper.push(baerJSON, lamaJSON, eisbaerJSON);
 
+let elefantJSON: string = JSON.stringify(new Beine(4, "Elefant", "grau", 30, "Medien/elefant_beine.jpg"));
+let huhnJSON: string = JSON.stringify(new Beine(2, "Huhn", "gelb", 10, "Medien/huhn_beine.jpg"));
+let katzeJSON: string = JSON.stringify(new Beine(4, "Katze", "gemischt", 50, "Medien/katzen_beine.jpg"));
+
+auswahlmoeglichkeiten.beine.push(elefantJSON, huhnJSON, katzeJSON);

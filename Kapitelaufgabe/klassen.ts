@@ -47,9 +47,9 @@ class Beine extends Koerperteile {
 }
 
 interface Auswahlmoeglichkeiten {
-    kopf: Kopf [];
-    koerper: Koeper[];
-    beine: Beine[];
+    kopf: string [];
+    koerper: string [];
+    beine: string [];
 }
 
 interface Auswahl {
