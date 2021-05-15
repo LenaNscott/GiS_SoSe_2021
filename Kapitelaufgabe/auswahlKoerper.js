@@ -52,6 +52,7 @@ function zurueckKlickenK() {
 }
 function auswaehlenKoerper() {
     auswahl.koerper = JSON.parse(auswahlmoeglichkeiten.koerper[imgCtrK]);
+    document.cookie = "Auswahl=" + JSON.stringify(auswahl) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
     console.log(auswahl.koerper);
 }
 //# sourceMappingURL=auswahlKoerper.js.map

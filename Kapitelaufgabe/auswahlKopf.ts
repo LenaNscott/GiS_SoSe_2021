@@ -63,7 +63,7 @@ auswaelen.addEventListener("click" , auswaehlenKopf);
 function auswaehlenKopf(): void {
 
         auswahl.kopf = JSON.parse(auswahlmoeglichkeiten.kopf[imgCtr]);
-        console.log(auswahl.kopf);
-   
+        document.cookie = "Auswahl=" + JSON.stringify(auswahl) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
+        console.log(auswahl);
 }
 

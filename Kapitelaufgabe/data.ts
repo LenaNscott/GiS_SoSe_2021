@@ -1,6 +1,16 @@
 // Nr. 2c)
+let auswahl: Auswahl;
 
-let auswahl: Auswahl = {kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "")};
+if (document.cookie) {
+    let cookieAuswahl: string[] = document.cookie.split("=");
+    auswahl = JSON.parse(cookieAuswahl[1]); 
+}
+
+else {
+    auswahl = {kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "")};
+}
+
+
 let auswahlmoeglichkeiten: Auswahlmoeglichkeiten = {kopf: [], koerper: [], beine: []};
 
 
@@ -21,6 +31,3 @@ let huhnJSON: string = JSON.stringify(new Beine(2, "Huhn", "gelb", 10, "Medien/h
 let katzeJSON: string = JSON.stringify(new Beine(4, "Katze", "gemischt", 50, "Medien/katzen_beine.jpg"));
 
 auswahlmoeglichkeiten.beine.push(elefantJSON, huhnJSON, katzeJSON);
-
-document.cookie = JSON.stringify(auswahl);
-let cookiesAuswahl: string = document.cookie;

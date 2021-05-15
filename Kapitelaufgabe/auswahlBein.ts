@@ -61,6 +61,7 @@ auswaelenB.addEventListener("click" , auswaehlenBeine);
 function auswaehlenBeine(): void {
 
         auswahl.beine = JSON.parse(auswahlmoeglichkeiten.beine[imgCtrB]);
+        document.cookie = "Auswahl=" + JSON.stringify(auswahl) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
         console.log(auswahl.beine);
    
 }

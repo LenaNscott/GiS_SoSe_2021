@@ -57,3 +57,4 @@ interface Auswahl {
     koerper: Koeper;
     beine: Beine;
 }
+

@@ -51,6 +51,7 @@ document.body.appendChild(auswaelenB);
 auswaelenB.addEventListener("click", auswaehlenBeine);
 function auswaehlenBeine() {
     auswahl.beine = JSON.parse(auswahlmoeglichkeiten.beine[imgCtrB]);
+    document.cookie = "Auswahl=" + JSON.stringify(auswahl) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
     console.log(auswahl.beine);
 }
 //# sourceMappingURL=auswahlBein.js.map
