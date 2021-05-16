@@ -26,4 +26,5 @@ bildauswahlB.src = auswahl.beine.bild;
 bildauswahlB.style.position = "absolute";
 bildauswahlB.style.top = "600px";
 document.body.appendChild(bildauswahlB);
+buttonsFaerben();
 //# sourceMappingURL=gestalt.js.map

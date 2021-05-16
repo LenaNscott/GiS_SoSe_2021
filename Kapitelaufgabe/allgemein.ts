@@ -79,3 +79,20 @@ function getKoerperteileArray (): Koerperteile[] {
         return leeresKoerperteilArray;
     }
 }
+
+function buttonsFaerben (): void {
+    if (auswahl.kopf.name != "") {
+        let buttonKopf: HTMLElement =  document.getElementById("Kopf");
+        buttonKopf.style.background = "green";
+    }
+    
+    if (auswahl.koerper.name != "") {
+        let buttonKoerper: HTMLElement =  document.getElementById("Koerper");
+        buttonKoerper.style.background = "green";
+    }
+    
+    if (auswahl.beine.name != "") {
+        let buttonBein: HTMLElement =  document.getElementById("Bein");
+        buttonBein.style.background = "green";
+    }
+}

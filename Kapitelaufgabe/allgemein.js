@@ -42,4 +42,18 @@ function getKoerperteileArray() {
             return leeresKoerperteilArray;
     }
 }
-//# sourceMappingURL=klassen.js.map
+function buttonsFaerben() {
+    if (auswahl.kopf.name != "") {
+        let buttonKopf = document.getElementById("Kopf");
+        buttonKopf.style.background = "green";
+    }
+    if (auswahl.koerper.name != "") {
+        let buttonKoerper = document.getElementById("Koerper");
+        buttonKoerper.style.background = "green";
+    }
+    if (auswahl.beine.name != "") {
+        let buttonBein = document.getElementById("Bein");
+        buttonBein.style.background = "green";
+    }
+}
+//# sourceMappingURL=allgemein.js.map

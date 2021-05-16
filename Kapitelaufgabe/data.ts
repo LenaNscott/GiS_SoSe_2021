@@ -20,9 +20,9 @@ let pferdK: Kopf = new Kopf("Karotte", "länglich", "Pferd", "braun", 500, "Medi
 
 auswahlmoeglichkeitenTemp.kopf.push(euleK, waschbaerK, pferdK);
 
-let baerKo: Koeper = new Koeper("rund", "Bär", "hellbraun", 30, "Medien/bär_koerper.jpg");
-let lamaKo: Koeper = new Koeper("mollig", "Lama", "hell", 40, "Medien/lama_koerper.jpg");
-let eisbaerKo: Koeper = new Koeper("fett", "Eisbär", "weiß", 70, "Medien/eisbaer_koerper.jpg");
+let baerKo: Koeper = new Koeper("musoloes", "starkerMann", "dunkelbraun", 30, "Medien/muskoloes.jpg");
+let lamaKo: Koeper = new Koeper("normal", "schwarzGekleidet", "schwarz", 10, "Medien/langweilig.jpg");
+let eisbaerKo: Koeper = new Koeper("gutGebaut", "polizist", "blau", 700, "Medien/polizist.jpg");
 
 auswahlmoeglichkeitenTemp.koerper.push(baerKo, lamaKo, eisbaerKo);
 
