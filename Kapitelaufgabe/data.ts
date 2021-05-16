@@ -11,23 +11,25 @@ else {
 }
 
 
-let auswahlmoeglichkeiten: Auswahlmoeglichkeiten = {kopf: [], koerper: [], beine: []};
+let auswahlmoeglichkeiten: string;
+let auswahlmoeglichkeitenTemp: Auswahlmoeglichkeiten = {kopf: [], koerper: [], beine: []};
 
+let euleK: Kopf = new Kopf("Würmer", "braun", "rund", "Eule", 60, "Medien/eule.jpg");
+let waschbaerK: Kopf = new Kopf("Müll", "dunkelbraun", "oval", "Waschbär", 20, "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg");
+let pferdK: Kopf = new Kopf("Karotte", "länglich", "Pferd", "braun", 500, "Medien/pferd.jpg");
 
-let euleKJSON: string = JSON.stringify(new Kopf("Würmer", "braun", "rund", "Eule", 60, "Medien/eule.jpg"));
-let waschbaerKJSON: string = JSON.stringify(new Kopf("Müll", "dunkelbraun", "oval", "Waschbär", 20, "Medien/waschbaer-kopf-comic-cartoon-sticker.jpg"));
-let pferdKJSON: string = JSON.stringify(new Kopf("Karotte", "länglich", "Pferd", "braun", 500, "Medien/pferd.jpg"));
+auswahlmoeglichkeitenTemp.kopf.push(euleK, waschbaerK, pferdK);
 
-auswahlmoeglichkeiten.kopf.push(euleKJSON, waschbaerKJSON, pferdKJSON);
+let baerKo: Koeper = new Koeper("rund", "Bär", "hellbraun", 30, "Medien/bär_koerper.jpg");
+let lamaKo: Koeper = new Koeper("mollig", "Lama", "hell", 40, "Medien/lama_koerper.jpg");
+let eisbaerKo: Koeper = new Koeper("fett", "Eisbär", "weiß", 70, "Medien/eisbaer_koerper.jpg");
 
-let baerJSON: string = JSON.stringify(new Koeper("rund", "Bär", "hellbraun", 30, "Medien/bär_koerper.jpg"));
-let lamaJSON: string = JSON.stringify(new Koeper("mollig", "Lama", "hell", 40, "Medien/lama_koerper.jpg"));
-let eisbaerJSON: string = JSON.stringify(new Koeper("fett", "Eisbär", "weiß", 70, "Medien/eisbaer_koerper.jpg"));
+auswahlmoeglichkeitenTemp.koerper.push(baerKo, lamaKo, eisbaerKo);
 
-auswahlmoeglichkeiten.koerper.push(baerJSON, lamaJSON, eisbaerJSON);
+let elefantB: Beine = new Beine(4, "Elefant", "grau", 30, "Medien/elefant_beine.jpg");
+let huhnB: Beine = new Beine(2, "Huhn", "gelb", 10, "Medien/huhn_beine.jpg");
+let katzeB: Beine = new Beine(4, "Katze", "gemischt", 50, "Medien/katzen_beine.jpg");
 
-let elefantJSON: string = JSON.stringify(new Beine(4, "Elefant", "grau", 30, "Medien/elefant_beine.jpg"));
-let huhnJSON: string = JSON.stringify(new Beine(2, "Huhn", "gelb", 10, "Medien/huhn_beine.jpg"));
-let katzeJSON: string = JSON.stringify(new Beine(4, "Katze", "gemischt", 50, "Medien/katzen_beine.jpg"));
+auswahlmoeglichkeitenTemp.beine.push(elefantB, huhnB, katzeB);
 
-auswahlmoeglichkeiten.beine.push(elefantJSON, huhnJSON, katzeJSON);
+auswahlmoeglichkeiten = JSON.stringify(auswahlmoeglichkeitenTemp);

@@ -26,4 +26,20 @@ class Beine extends Koerperteile {
             this.anzahl = _anzahl;
     }
 }
+function getAuswahlmoeglichkeiten() {
+    return JSON.parse(auswahlmoeglichkeiten);
+}
+function getKoerperteileArray() {
+    switch (window.location.pathname) {
+        case "/kopf.html":
+            return getAuswahlmoeglichkeiten().kopf;
+        case "/koerper.html":
+            return getAuswahlmoeglichkeiten().koerper;
+        case "/bein.html":
+            return getAuswahlmoeglichkeiten().beine;
+        default:
+            let leeresKoerperteilArray;
+            return leeresKoerperteilArray;
+    }
+}
 //# sourceMappingURL=klassen.js.map

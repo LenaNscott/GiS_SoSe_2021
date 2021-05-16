@@ -4,6 +4,10 @@ class Koerperteile {
     farbe: string;
     preis: number;
     bild: string;
+    essen: string;
+    kopfform: string;
+    koerperform: string;
+    anzahl: number;
 
     constructor (_name: string, _farbe: string, _preis: number, _bild: string) {
         this.name = _name;
@@ -47,9 +51,9 @@ class Beine extends Koerperteile {
 }
 
 interface Auswahlmoeglichkeiten {
-    kopf: string [];
-    koerper: string [];
-    beine: string [];
+    kopf: Kopf [];
+    koerper: Koeper [];
+    beine: Beine [];
 }
 
 interface Auswahl {
@@ -58,3 +62,20 @@ interface Auswahl {
     beine: Beine;
 }
 
+function getAuswahlmoeglichkeiten (): Auswahlmoeglichkeiten {
+    return JSON.parse(auswahlmoeglichkeiten);
+}
+
+function getKoerperteileArray (): Koerperteile[] {
+    switch (window.location.pathname) {
+    case "/kopf.html": 
+        return getAuswahlmoeglichkeiten().kopf;
+    case "/koerper.html": 
+        return getAuswahlmoeglichkeiten().koerper;
+    case "/bein.html": 
+        return getAuswahlmoeglichkeiten().beine;
+    default:
+        let leeresKoerperteilArray: Koerperteile[];        
+        return leeresKoerperteilArray;
+    }
+}
