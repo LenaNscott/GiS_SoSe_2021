@@ -67,14 +67,17 @@ function getAuswahlmoeglichkeiten (): Auswahlmoeglichkeiten {
 }
 
 function getKoerperteileArray (): Koerperteile[] {
-    switch (window.location.pathname) {
-    case "/kopf.html": 
+    let pname: string = window.location.pathname;
+    if (pname.indexOf("kopf") != -1) {
         return getAuswahlmoeglichkeiten().kopf;
-    case "/koerper.html": 
+    }
+    else if (pname.indexOf("koerper") != -1) {
         return getAuswahlmoeglichkeiten().koerper;
-    case "/bein.html": 
+    }
+    else if (pname.indexOf("bein") != -1) {
         return getAuswahlmoeglichkeiten().beine;
-    default:
+    }
+    else {
         let leeresKoerperteilArray: Koerperteile[];        
         return leeresKoerperteilArray;
     }

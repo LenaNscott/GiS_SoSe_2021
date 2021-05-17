@@ -30,16 +30,19 @@ function getAuswahlmoeglichkeiten() {
     return JSON.parse(auswahlmoeglichkeiten);
 }
 function getKoerperteileArray() {
-    switch (window.location.pathname) {
-        case "/kopf.html":
-            return getAuswahlmoeglichkeiten().kopf;
-        case "/koerper.html":
-            return getAuswahlmoeglichkeiten().koerper;
-        case "/bein.html":
-            return getAuswahlmoeglichkeiten().beine;
-        default:
-            let leeresKoerperteilArray;
-            return leeresKoerperteilArray;
+    let pname = window.location.pathname;
+    if (pname.indexOf("kopf") != -1) {
+        return getAuswahlmoeglichkeiten().kopf;
+    }
+    else if (pname.indexOf("koerper") != -1) {
+        return getAuswahlmoeglichkeiten().koerper;
+    }
+    else if (pname.indexOf("bein") != -1) {
+        return getAuswahlmoeglichkeiten().beine;
+    }
+    else {
+        let leeresKoerperteilArray;
+        return leeresKoerperteilArray;
     }
 }
 function buttonsFaerben() {

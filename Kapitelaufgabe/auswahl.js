@@ -52,17 +52,15 @@ auswaelen.style.position = "absolute";
 document.body.appendChild(auswaelen);
 auswaelen.addEventListener("click", auswaehlen);
 function auswaehlen() {
-    switch (window.location.pathname) {
-        case "/kopf.html":
-            auswahl.kopf = getKoerperteileArray()[imgCtr];
-            break;
-        case "/koerper.html":
-            auswahl.koerper = getKoerperteileArray()[imgCtr];
-            break;
-        case "/bein.html":
-            auswahl.beine = getKoerperteileArray()[imgCtr];
-            break;
-        default:
+    let pname = window.location.pathname;
+    if (pname.indexOf("kopf") != -1) {
+        auswahl.kopf = getKoerperteileArray()[imgCtr];
+    }
+    else if (pname.indexOf("koerper") != -1) {
+        auswahl.koerper = getKoerperteileArray()[imgCtr];
+    }
+    else if (pname.indexOf("bein") != -1) {
+        auswahl.beine = getKoerperteileArray()[imgCtr];
     }
     document.cookie = "Auswahl=" + JSON.stringify(auswahl) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
     console.log(auswahl);
