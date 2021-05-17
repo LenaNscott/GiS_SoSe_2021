@@ -77,6 +77,7 @@ function auswaehlen(): void {
     buttonsFaerben();
 
     if (auswahl.kopf.name != "" && auswahl.koerper.name != "" && auswahl.beine.name != "") {
-        window.location.pathname = "/gestalt.html";
+        let geschnittenerPathname: string = pname.slice(0, pname.lastIndexOf("/"));
+        window.location.pathname = geschnittenerPathname + "/gestalt.html";
     }
 }
