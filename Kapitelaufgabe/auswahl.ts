@@ -1,3 +1,4 @@
+
 buttonsFaerben();
 
 let zurueck: HTMLElement = document.createElement("BUTTON");
@@ -72,7 +73,7 @@ function auswaehlen(): void {
     else if (pname.indexOf("bein") != -1) {
         auswahl.beine = getKoerperteileArray()[imgCtr];
     }
-    document.cookie = "Auswahl=" + JSON.stringify(auswahl) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
+    document.cookie = "Auswahl=" + (auswahl) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
     console.log(auswahl);
     buttonsFaerben();
 
