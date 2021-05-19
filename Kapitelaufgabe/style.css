@@ -59,6 +59,54 @@ body {
     background-color: lightblue;
 }
 
+#buttonZurueck{
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    top: 230px;
+    left: 575px;
+}
+
+#buttonVor{
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    top: 230px;
+    left: 825px;
+}
+
+#auswahlBild {
+    width: 400px;
+    height: 400px;
+    left: 575px;
+    position: absolute;
+    top: 270px;
+}
+
+#Kopf1 {
+    width: 200px;
+    height: 200px;
+    left: 575px;
+    top: 200px;
+    position: absolute;
+}
+
+#Koerper1{
+    width: 200px;
+    height: 200px;
+    left: 575px;
+    top: 400px;
+    position: absolute;
+}
+
+#Bein1 {
+    width: 200px;
+    height: 200px;
+    left: 575px;
+    top: 600px;
+    position: absolute;
+}
+
 h1{
     font-size: 70px;
     text-align: center;

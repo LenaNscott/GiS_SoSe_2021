@@ -1,38 +1,18 @@
 
 buttonsFaerben();
 
-let zurueck: HTMLElement = document.createElement("BUTTON");
-zurueck.style.width = "150px";
-zurueck.style.height = "30px";
-zurueck.innerHTML = "Vorheriges Bild ";
-zurueck.style.position = "absolute";
-zurueck.style.top = "230px";
-zurueck.style.left = "575px";
-document.body.appendChild(zurueck);
+let zurueck: HTMLElement = document.getElementById("buttonZurueck");
 zurueck.addEventListener("click" , zurueckKlicken);
 
-let vor: HTMLElement = document.createElement("BUTTON");
-vor.style.width = "150px";
-vor.style.height = "30px";
-vor.innerHTML = "Nächstes Bild";
-vor.style.position = "absolute";
-vor.style.top = "230px";
-vor.style.left = "825px";
-document.body.appendChild(vor);
+let vor: HTMLElement = document.getElementById("buttonVor");
 vor.addEventListener("click", weiter);
 
 
 
 let imgCtr: number = 0;
 
-let bild2: HTMLImageElement = document.createElement("img");
-bild2.width = 400;
-bild2.height = 400;
-bild2.style.left = "575px";
-bild2.src = getKoerperteileArray()[imgCtr].bild;
-bild2.style.position = "absolute";
-bild2.style.top = "270px";
-document.body.appendChild(bild2);
+let bild2: HTMLElement = document.getElementById("auswahlBild");
+bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
 
 function weiter (): void {
     if (imgCtr < (getKoerperteileArray().length - 1))
@@ -41,7 +21,7 @@ function weiter (): void {
         imgCtr = 0;
     }
     
-    bild2.src = getKoerperteileArray()[imgCtr].bild;
+    bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
 }
 
 function zurueckKlicken (): void {
@@ -49,7 +29,7 @@ function zurueckKlicken (): void {
         imgCtr -= 1;    
     else
         imgCtr = getKoerperteileArray().length - 1;
-    bild2.src = getKoerperteileArray()[imgCtr].bild;
+    bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
 }
 
 let auswaelen: HTMLElement = document.createElement("BUTTON");

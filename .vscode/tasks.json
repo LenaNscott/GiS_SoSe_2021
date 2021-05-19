@@ -10,6 +10,26 @@
 			],
 			"group": "build",
 			"label": "tsc: watch - Aufgabe2-1/tsconfig.json"
+		},
+		{
+			"type": "typescript",
+			"tsconfig": "Aufgabe2-3/tsconfig.json",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build",
+			"label": "tsc: watch - Aufgabe2-3/tsconfig.json"
+		},
+		{
+			"type": "typescript",
+			"tsconfig": "tsconfig.json",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build",
+			"label": "tsc: watch - tsconfig.json"
 		}
 	]
 }
