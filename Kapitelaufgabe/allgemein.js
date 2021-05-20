@@ -29,6 +29,12 @@ class Beine extends Koerperteile {
 function getAuswahlmoeglichkeiten() {
     return JSON.parse(auswahlmoeglichkeiten);
 }
+/*let _url: URL = data.JSON;
+
+async function getAuswahlmoeglichkeiten(_url: RequestInfo): Promise<void> {
+    let response: Response = await fetch(_url);
+    console.log("Response", response);
+  }*/
 function getKoerperteileArray() {
     let pname = window.location.pathname;
     if (pname.indexOf("kopf") != -1) {

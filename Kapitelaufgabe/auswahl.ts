@@ -55,3 +55,4 @@ function auswaehlen(): void {
         window.location.pathname = geschnittenerPathname + "/gestalt.html";
     }
 }
+

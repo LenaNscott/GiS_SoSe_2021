@@ -62,9 +62,17 @@ interface Auswahl {
     beine: Beine;
 }
 
+
 function getAuswahlmoeglichkeiten (): Auswahlmoeglichkeiten {
     return JSON.parse(auswahlmoeglichkeiten);
-}
+} 
+
+/*let _url: URL = data.JSON;
+
+async function getAuswahlmoeglichkeiten(_url: RequestInfo): Promise<void> {
+    let response: Response = await fetch(_url);
+    console.log("Response", response);
+  }*/
 
 function getKoerperteileArray (): Koerperteile[] {
     let pname: string = window.location.pathname;
@@ -99,3 +107,4 @@ function buttonsFaerben (): void {
         buttonBein.style.background = "green";
     }
 }
+
