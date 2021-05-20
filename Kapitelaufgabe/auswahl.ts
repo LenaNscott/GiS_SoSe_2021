@@ -32,14 +32,7 @@ function zurueckKlicken (): void {
     bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
 }
 
-let auswaelen: HTMLElement = document.createElement("BUTTON");
-auswaelen.style.width = "200px";
-auswaelen.style.height = "30px";
-auswaelen.style.top = "675px";
-auswaelen.innerHTML = "Auswählen";
-auswaelen.style.left = "680px";
-auswaelen.style.position = "absolute";
-document.body.appendChild(auswaelen);
+let auswaelen: HTMLElement = document.getElementById("auswaehlen");
 auswaelen.addEventListener("click" , auswaehlen);
 
 function auswaehlen(): void {

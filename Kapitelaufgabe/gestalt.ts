@@ -1,5 +1,4 @@
 
-
 let bildauswahlK: HTMLElement = document.getElementById("Kopf1");
 bildauswahlK.setAttribute("src", auswahl.kopf.bild);
 

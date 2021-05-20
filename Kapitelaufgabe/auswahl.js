@@ -22,14 +22,7 @@ function zurueckKlicken() {
         imgCtr = getKoerperteileArray().length - 1;
     bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
 }
-let auswaelen = document.createElement("BUTTON");
-auswaelen.style.width = "200px";
-auswaelen.style.height = "30px";
-auswaelen.style.top = "675px";
-auswaelen.innerHTML = "Auswählen";
-auswaelen.style.left = "680px";
-auswaelen.style.position = "absolute";
-document.body.appendChild(auswaelen);
+let auswaelen = document.getElementById("auswaehlen");
 auswaelen.addEventListener("click", auswaehlen);
 function auswaehlen() {
     let pname = window.location.pathname;
