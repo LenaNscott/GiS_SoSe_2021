@@ -1,5 +1,5 @@
 // Nr. 2c)
-let auswahl: Auswahl;
+/* let auswahl: Auswahl;
 
 if (document.cookie) {
     let cookieAuswahl: string[] = document.cookie.split("=");
@@ -113,4 +113,4 @@ let auswahlmoeglichkeitenTemp: Auswahlmoeglichkeiten = {
     };
 
 auswahlmoeglichkeiten = JSON.stringify(auswahlmoeglichkeitenTemp);
-console.log(auswahlmoeglichkeiten);
+console.log(auswahlmoeglichkeiten); */

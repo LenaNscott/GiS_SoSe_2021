@@ -62,17 +62,29 @@ interface Auswahl {
     beine: Beine;
 }
 
+let auswahl: Auswahl;
+
+if (document.cookie) {
+    let cookieAuswahl: string[] = document.cookie.split("=");
+    auswahl = JSON.parse(cookieAuswahl[1]); 
+}
+
+else {
+    auswahl = {kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "")};
+}
+
+
+let auswahlmoeglichkeiten: string;
+
+fetch("data.json")
+  .then(response => response.json())
+  .then(data => console.log(data));
+auswahlmoeglichkeiten = "SELECT MAX(id) tarifid FROM mftextbausteine";
 
 function getAuswahlmoeglichkeiten (): Auswahlmoeglichkeiten {
     return JSON.parse(auswahlmoeglichkeiten);
 } 
 
-/*let _url: URL = data.JSON;
-
-async function getAuswahlmoeglichkeiten(_url: RequestInfo): Promise<void> {
-    let response: Response = await fetch(_url);
-    console.log("Response", response);
-  }*/
 
 function getKoerperteileArray (): Koerperteile[] {
     let pname: string = window.location.pathname;

@@ -31,8 +31,9 @@
         "koerperform": "",
         "anzahl": 0
     }
-],
-"koerper": [
+    ],
+
+    "koerper": [
     {
         "name": "starkerMann",
         "farbe": "dunkelbraun",
@@ -63,8 +64,9 @@
         "essen": "",
         "anzahl": 0
     }
-],
-"beine": [
+    ],
+
+    "beine": [
     {
         "name": "Elefant",
         "farbe": "grau",
@@ -95,5 +97,5 @@
         "kopfform": "",
         "koerperform": ""
     }
-]
+    ]
 }
