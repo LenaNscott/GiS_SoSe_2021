@@ -26,25 +26,33 @@ class Beine extends Koerperteile {
             this.anzahl = _anzahl;
     }
 }
-function getAuswahlmoeglichkeiten() {
-    return JSON.parse(auswahlmoeglichkeiten);
+let auswahl;
+if (document.cookie) {
+    let cookieAuswahl = document.cookie.split("=");
+    auswahl = JSON.parse(cookieAuswahl[1]);
 }
-/*let _url: URL = data.JSON;
-
-async function getAuswahlmoeglichkeiten(_url: RequestInfo): Promise<void> {
-    let response: Response = await fetch(_url);
-    console.log("Response", response);
-  }*/
-function getKoerperteileArray() {
+else {
+    auswahl = { kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "") };
+}
+async function communicate(_url) {
+    let response = await fetch(_url);
+    let auswahlmoeglichkeiten = await response.json();
+    console.log("Response", auswahlmoeglichkeiten);
+    koerperteilArray = getKoerperteileArray(auswahlmoeglichkeiten);
+    console.log(koerperteilArray);
+    bild2.setAttribute("src", koerperteilArray[imgCtr].bild);
+    console.log(bild2);
+}
+function getKoerperteileArray(_auswahlmoeglichkeiten) {
     let pname = window.location.pathname;
     if (pname.indexOf("kopf") != -1) {
-        return getAuswahlmoeglichkeiten().kopf;
+        return _auswahlmoeglichkeiten.kopf;
     }
     else if (pname.indexOf("koerper") != -1) {
-        return getAuswahlmoeglichkeiten().koerper;
+        return _auswahlmoeglichkeiten.koerper;
     }
     else if (pname.indexOf("bein") != -1) {
-        return getAuswahlmoeglichkeiten().beine;
+        return _auswahlmoeglichkeiten.beine;
     }
     else {
         let leeresKoerperteilArray;

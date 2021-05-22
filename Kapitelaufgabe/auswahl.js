@@ -4,36 +4,40 @@ let zurueck = document.getElementById("buttonZurueck");
 zurueck.addEventListener("click", zurueckKlicken);
 let vor = document.getElementById("buttonVor");
 vor.addEventListener("click", weiter);
-let imgCtr = 0;
 let bild2 = document.getElementById("auswahlBild");
-bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
+let koerperteilArray;
+let imgCtr = 0;
+communicate("http://127.0.0.1:8081/data.JSON");
+//let bild2: HTMLElement = document.getElementById("auswahlBild");
+//let promise: Promise<Koerperteile[]> = getKoerperteileArray();
+//promise.finally(function() {bild2.setAttribute("src", koerperteilArray[imgCtr].bild); });
 function weiter() {
-    if (imgCtr < (getKoerperteileArray().length - 1))
+    if (imgCtr < (koerperteilArray.length - 1))
         imgCtr += 1;
     else {
         imgCtr = 0;
     }
-    bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
+    bild2.setAttribute("src", koerperteilArray[imgCtr].bild);
 }
 function zurueckKlicken() {
     if (imgCtr > 0)
         imgCtr -= 1;
     else
-        imgCtr = getKoerperteileArray().length - 1;
-    bild2.setAttribute("src", getKoerperteileArray()[imgCtr].bild);
+        imgCtr = koerperteilArray.length - 1;
+    bild2.setAttribute("src", koerperteilArray[imgCtr].bild);
 }
 let auswaelen = document.getElementById("auswaehlen");
 auswaelen.addEventListener("click", auswaehlen);
 function auswaehlen() {
     let pname = window.location.pathname;
     if (pname.indexOf("kopf") != -1) {
-        auswahl.kopf = getKoerperteileArray()[imgCtr];
+        auswahl.kopf = koerperteilArray[imgCtr];
     }
     else if (pname.indexOf("koerper") != -1) {
-        auswahl.koerper = getKoerperteileArray()[imgCtr];
+        auswahl.koerper = koerperteilArray[imgCtr];
     }
     else if (pname.indexOf("bein") != -1) {
-        auswahl.beine = getKoerperteileArray()[imgCtr];
+        auswahl.beine = koerperteilArray[imgCtr];
     }
     document.cookie = "Auswahl=" + (JSON.stringify(auswahl)) + "; expires=Fri, 31 Dec 2021 12:00:00 UTC; path=/";
     console.log(auswahl);
