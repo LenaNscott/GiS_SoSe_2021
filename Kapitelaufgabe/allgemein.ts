@@ -73,14 +73,13 @@ else {
     auswahl = {kopf: new Kopf("", "", "", "", 0, ""), koerper: new Koeper("", "", "", 0, ""), beine: new Beine(0, "", "", 0, "")};
 }
 
-async function communicate(_url: RequestInfo): Promise<void> {
+async function ladenJsonDatei(_url: RequestInfo): Promise<void> {
     let response: Response = await fetch(_url);
     let auswahlmoeglichkeiten: Auswahlmoeglichkeiten = await response.json();
     console.log("Response", auswahlmoeglichkeiten);
     koerperteilArray = getKoerperteileArray(auswahlmoeglichkeiten);
-    console.log(koerperteilArray);
+    //console.log(koerperteilArray);
     bild2.setAttribute("src", koerperteilArray[imgCtr].bild);
-    console.log(bild2);
   }
 
 function getKoerperteileArray (_auswahlmoeglichkeiten: Auswahlmoeglichkeiten): Koerperteile[] {

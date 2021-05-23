@@ -11,7 +11,7 @@ vor.addEventListener("click", weiter);
 let bild2: HTMLElement = document.getElementById("auswahlBild");
 let koerperteilArray: Koerperteile[];
 let imgCtr: number = 0;
-communicate("http://127.0.0.1:8081/data.JSON");
+ladenJsonDatei("https://lenanscott.github.io/GiS_SoSe_2021/Kapitelaufgabe/data.JSON");
 
 function weiter (): void {
     if (imgCtr < (koerperteilArray.length - 1))
