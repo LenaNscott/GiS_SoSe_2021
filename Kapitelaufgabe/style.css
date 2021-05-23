@@ -64,7 +64,7 @@ body {
     height: 30px;
     position: absolute;
     top: 230px;
-    left: 575px;
+    left: 675px;
 }
 
 #buttonVor{
@@ -72,13 +72,13 @@ body {
     height: 30px;
     position: absolute;
     top: 230px;
-    left: 825px;
+    left: 925px;
 }
 
 #auswahlBild {
     width: 400px;
     height: 400px;
-    left: 575px;
+    left: 675px;
     position: absolute;
     top: 270px;
 }
@@ -86,7 +86,7 @@ body {
 #Kopf1 {
     width: 200px;
     height: 200px;
-    left: 575px;
+    left: 775px;
     top: 200px;
     position: absolute;
 }
@@ -94,7 +94,7 @@ body {
 #Koerper1{
     width: 200px;
     height: 200px;
-    left: 575px;
+    left: 775px;
     top: 400px;
     position: absolute;
 }
@@ -102,7 +102,7 @@ body {
 #Bein1 {
     width: 200px;
     height: 200px;
-    left: 575px;
+    left: 775px;
     top: 600px;
     position: absolute;
 }
@@ -111,7 +111,7 @@ body {
     width: 150px;
     height: 30px;
     top: 675px;
-    left: 710px;
+    left: 810px;
     position: absolute;
 }
 
