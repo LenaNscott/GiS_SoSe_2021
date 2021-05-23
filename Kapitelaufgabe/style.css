@@ -86,7 +86,7 @@ body {
 #Kopf1 {
     width: 200px;
     height: 200px;
-    left: 775px;
+    left: 1075px;
     top: 200px;
     position: absolute;
 }
@@ -94,7 +94,7 @@ body {
 #Koerper1{
     width: 200px;
     height: 200px;
-    left: 775px;
+    left: 1075px;
     top: 400px;
     position: absolute;
 }
@@ -102,7 +102,7 @@ body {
 #Bein1 {
     width: 200px;
     height: 200px;
-    left: 775px;
+    left: 1075px;
     top: 600px;
     position: absolute;
 }
