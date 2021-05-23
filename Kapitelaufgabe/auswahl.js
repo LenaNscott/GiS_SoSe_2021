@@ -8,9 +8,6 @@ let bild2 = document.getElementById("auswahlBild");
 let koerperteilArray;
 let imgCtr = 0;
 communicate("http://127.0.0.1:8081/data.JSON");
-//let bild2: HTMLElement = document.getElementById("auswahlBild");
-//let promise: Promise<Koerperteile[]> = getKoerperteileArray();
-//promise.finally(function() {bild2.setAttribute("src", koerperteilArray[imgCtr].bild); });
 function weiter() {
     if (imgCtr < (koerperteilArray.length - 1))
         imgCtr += 1;

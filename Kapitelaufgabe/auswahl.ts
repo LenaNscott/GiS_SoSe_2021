@@ -9,12 +9,9 @@ vor.addEventListener("click", weiter);
 
 
 let bild2: HTMLElement = document.getElementById("auswahlBild");
-let koerperteilArray: Koerperteile[]
+let koerperteilArray: Koerperteile[];
 let imgCtr: number = 0;
 communicate("http://127.0.0.1:8081/data.JSON");
-//let bild2: HTMLElement = document.getElementById("auswahlBild");
-//let promise: Promise<Koerperteile[]> = getKoerperteileArray();
-//promise.finally(function() {bild2.setAttribute("src", koerperteilArray[imgCtr].bild); });
 
 function weiter (): void {
     if (imgCtr < (koerperteilArray.length - 1))

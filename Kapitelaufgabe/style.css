@@ -115,6 +115,11 @@ body {
     position: absolute;
 }
 
+#ausgabeDiv {
+    left: auto;
+    width: 400px;
+}
+
 h1{
     font-size: 70px;
     text-align: center;
