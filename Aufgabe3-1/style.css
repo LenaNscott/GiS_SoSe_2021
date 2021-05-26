@@ -1,0 +1,40 @@
+
+#uname {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 200px;
+    left: 700px;
+}
+
+#usname {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 210px;
+    left: 600px;
+}
+
+#pwort {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 250px;
+    left: 700px; 
+}
+
+#pawort {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 260px;
+    left: 600px;
+}
+
+button {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 350px;
+    left: 750px; 
+}
