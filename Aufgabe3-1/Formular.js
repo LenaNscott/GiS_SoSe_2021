@@ -10,7 +10,7 @@ async function senden() {
         console.log("name: " + entry[0]);
         console.log("value: " + entry[1]);
     }
-    let url = "http://127.0.0.1:8100";
+    let url = "https://lenasfancyapp.herokuapp.com"; // let url: string = "http://127.0.0.1:8100";
     let query = new URLSearchParams(formData);
     url = url + "?" + query.toString();
     console.log(url);
