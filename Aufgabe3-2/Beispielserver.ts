@@ -1,25 +1,25 @@
-import * as Http from "http"; //Erstellung eines http-Objekts, der Interpret schaut nach möglichen http Modulen und hängt sie an, einem nach dem anderen, an den http-Objekt
+import * as Http from "http"; 
 import * as Url from "url";
 
-export namespace P_3_1Server { //Exportiert "P_3_1Server" mit Namespace, da Name schon existiert
-    console.log("Starting server"); //Gibt "Starting server" in der Konsole aus
-    let port: number = Number(process.env.PORT); //port als Zahl wird deklariert und als process.env.PORT initialisiert. Das gibt Heroku welchen PORT er überwachen soll.
-    if (!port) //Wenn "nicht port", wenn da nichts ist, dann
-        port = 8100; // ist port = 8100, also PORT 8100 überwachen
+export namespace P_3_1Server { 
+    console.log("Starting server"); 
+    let port: number = Number(process.env.PORT); 
+    if (!port) 
+        port = 8100; 
 
-    let server: Http.Server = Http.createServer(); // server wird deklariert als Http.Server und initialisiert mit "Http.createServer()", ein Server wird erstellt
-    server.addListener("request", handleRequest); // gibt server ein Listener, hört ab und wenn er einen "request" hört wird die Funktion handleRequest ausgeführt
-    server.addListener("listening", handleListen); // gibt server ein Listener, hört ab und wenn er ein "listening" hört wird die Funktion handleListen ausgeführt
-    server.listen(port); //Erstellt einenen Listener für den angegebenen PORT
+    let server: Http.Server = Http.createServer(); 
+    server.addListener("request", handleRequest); 
+    server.addListener("listening", handleListen);
+    server.listen(port); 
 
-    function handleListen(): void { //Funktion gibt nichts zurück
-        console.log("Listening"); //Gibt in der Konsole "Listening" aus
+    function handleListen(): void { 
+        console.log("Listening"); 
     }
 
 
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void { //Http.IncomingMassage muss übergeben werden (repräsentiert die Anforderung an den Server, erstes Argument in der requestListener-Funktion) und Http.ServerResponse (zweiter Parameter in der requestListener-Funktion, repräsentiert den beschreibbaren Stream zurück zum Client)
-        console.log("I hear voices!"); //gibt "I hear voices!" in der Konsole aus, wird also immer ausgegeben wenn ein request am Server ankam
-        _response.setHeader("content-type", "text/html; charset=utf-8"); //ist der Statuscode und ein Objekt, das den Antwortheader enthält
+    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void { 
+        console.log("I hear voices!"); 
+        _response.setHeader("content-type", "text/html; charset=utf-8"); 
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
         if (_request.url) {
@@ -33,8 +33,9 @@ export namespace P_3_1Server { //Exportiert "P_3_1Server" mit Namespace, da Name
             let jsonString: string = JSON.stringify(url.query);
             _response.write(jsonString);
         }
-        _response.write(_request.url); // schreibt die Request Url in den Antwortstream, _request.url enthält die Nutzdaten, die nach dem ? an die Url angehängt werden
-        console.log(_request.url); // gibt die Nutzdaten in der Console aus
-        _response.end(); //Beendet den Antwortprozess 
+        _response.write(_request.url); 
+        console.log(_request.url); 
+        _response.end(); 
+
     }
 }

@@ -31,10 +31,18 @@
     left: 600px;
 }
 
-button {
+#abschicken {
     height: 30px;
     width: auto;
     position: absolute;
     top: 350px;
-    left: 750px; 
+    left: 700px; 
+}
+
+#anfrage {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 350px;
+    left: 800px;
 }
