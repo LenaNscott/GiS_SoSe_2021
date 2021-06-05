@@ -1,26 +1,26 @@
 "use strict";
-let abschicken = document.getElementById("abschicken");
-abschicken.addEventListener("click", versenden);
-//let anfrage: HTMLElement = document.getElementById("anfrage");
-//anfrage.addEventListener("click", anfragen);
+let html = document.getElementById("html");
+html.addEventListener("click", htmlAnfragen);
+let htmlTextfeld = document.getElementById("divElement");
+let json = document.getElementById("json");
+json.addEventListener("click", jsonAnfragen);
 //console.log(formData.get("form"));
-let formData = new FormData(document.forms[0]);
-async function versenden() {
-    let url = "http://localhost:8100/";
+async function versenden(url) {
+    let formData = new FormData(document.forms[0]);
     let query = new URLSearchParams(formData);
-    url = url + "?" + query.toString();
     let response = await fetch(url + "?" + query.toString());
     let responseText = await response.text();
-    console.log(responseText);
-    let name = ("Username: " + formData.get("username"));
-    let code = ("Passwort: " + formData.get("passwort"));
-    let ausgabe = document.createElement("p");
-    let ausgabe2 = document.createElement("p");
-    let text = document.createTextNode(name);
-    let text2 = document.createTextNode(code);
-    ausgabe.appendChild(text);
-    ausgabe2.appendChild(text2);
-    document.body.appendChild(ausgabe);
-    document.body.appendChild(ausgabe2);
+    return responseText;
+}
+async function htmlAnfragen() {
+    let url = "https://lenasfancyapp.herokuapp.com/html";
+    let responseText = await versenden(url);
+    htmlTextfeld.innerHTML = responseText;
+}
+async function jsonAnfragen() {
+    let url = "https://lenasfancyapp.herokuapp.com/json";
+    let responseText = await versenden(url);
+    let user = JSON.parse(responseText);
+    console.log(user);
 }
 //# sourceMappingURL=Formular.js.map

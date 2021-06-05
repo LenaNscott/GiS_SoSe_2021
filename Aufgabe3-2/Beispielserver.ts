@@ -18,10 +18,26 @@ export namespace P_3_1Server {
 
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void { 
-        console.log("I hear voices!"); 
+        //console.log("I hear voices!"); 
+        let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
         _response.setHeader("content-type", "text/html; charset=utf-8"); 
         _response.setHeader("Access-Control-Allow-Origin", "*");
+        if (url.pathname == "/html") {
+            _response.write("<p><b>Username: </b>" + url.query.username + "</p>");
+            _response.write("<p><b>Passwort: </b>" + url.query.passwort + "</p>");
+        }
 
+        else if (url.pathname == "/json") {
+            let jsonString: string = JSON.stringify(url.query);
+            _response.write(jsonString);
+        }
+             
+        _response.end(); 
+
+    }
+}
+
+/*
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
 
@@ -31,11 +47,6 @@ export namespace P_3_1Server {
             }
 
             let jsonString: string = JSON.stringify(url.query);
-            _response.write(jsonString);
+            _response.write(jsonString);            
         }
-        _response.write(_request.url); 
-        console.log(_request.url); 
-        _response.end(); 
-
-    }
-}
+        */

@@ -31,7 +31,7 @@
     left: 600px;
 }
 
-#abschicken {
+#html {
     height: 30px;
     width: auto;
     position: absolute;
@@ -39,7 +39,7 @@
     left: 700px; 
 }
 
-#anfrage {
+#json {
     height: 30px;
     width: auto;
     position: absolute;
