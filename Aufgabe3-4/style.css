@@ -1,0 +1,72 @@
+
+#uname {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 200px;
+    left: 700px;
+}
+
+#usname {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 210px;
+    left: 600px;
+}
+
+#mail {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 250px;
+    left: 700px; 
+}
+
+#email {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 260px;
+    left: 600px;
+}
+
+#pwort {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 300px;
+    left: 700px; 
+}
+
+#pawort {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 310px;
+    left: 600px;
+}
+
+#senden {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 350px;
+    left: 700px; 
+}
+
+#empfangen {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 350px;
+    left: 800px;
+}
+
+#antwort {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 400px;
+    left: 600px;
+}
