@@ -21,7 +21,7 @@ var P_3_1Server;
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        eingabe = mongoClient.db("Datenbank").collection("Studenten");
+        eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
         console.log("Datenbase conection", eingabe != undefined);
     }
     function handleListen() {
@@ -33,8 +33,7 @@ var P_3_1Server;
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
         if (url.pathname == "/html") {
-            _response.write("<p><b>Username: </b>" + url.query.username + "</p>");
-            _response.write("<p><b>Passwort: </b>" + url.query.passwort + "</p>");
+            getAntwort(databaseUrl);
         }
         else if (url.pathname == "/json") {
             let jsonString = JSON.stringify(url.query);
@@ -45,6 +44,15 @@ var P_3_1Server;
     }
     function formularEingabe(_anmeldung) {
         eingabe.insert(_anmeldung);
+    }
+    async function getAntwort(_url) {
+        let options = { useNewUrlParser: true, useUnifiedTopology: true };
+        let mongoClient = new Mongo.MongoClient(_url, options);
+        await mongoClient.connect();
+        eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
+        let cursor = eingabe.find({});
+        console.log(cursor);
+        return cursor;
     }
 })(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
 //# sourceMappingURL=Beispielserver.js.map

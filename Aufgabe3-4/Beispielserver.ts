@@ -27,7 +27,7 @@ export namespace P_3_1Server {
         let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        eingabe = mongoClient.db("Datenbank").collection("Studenten");
+        eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
         console.log("Datenbase conection", eingabe != undefined);
     }
   
@@ -43,8 +43,7 @@ export namespace P_3_1Server {
         _response.setHeader("content-type", "text/html; charset=utf-8"); 
         _response.setHeader("Access-Control-Allow-Origin", "*");
         if (url.pathname == "/html") {
-            _response.write("<p><b>Username: </b>" + url.query.username + "</p>");
-            _response.write("<p><b>Passwort: </b>" + url.query.passwort + "</p>");
+            getAntwort(databaseUrl);
         }
 
         else if (url.pathname == "/json") {
@@ -59,5 +58,15 @@ export namespace P_3_1Server {
 
     function formularEingabe (_anmeldung: Anmeldung): void {
         eingabe.insert(_anmeldung);
+    }
+
+    async function getAntwort (_url: string): Promise<any> {
+        let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
+        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
+        await mongoClient.connect();
+        eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
+        let cursor: Mongo.Cursor = eingabe.find({});
+        console.log(cursor);
+        return cursor;
     }
 }
