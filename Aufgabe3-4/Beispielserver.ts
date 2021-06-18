@@ -2,6 +2,7 @@ import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
+
 export namespace P_3_1Server { 
     let eingabe: Mongo.Collection;
    
@@ -37,16 +38,31 @@ export namespace P_3_1Server {
     }
     
 
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void { 
+    async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise <void> { 
         //console.log("I hear voices!"); 
         let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
         _response.setHeader("content-type", "text/html; charset=utf-8"); 
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        if (url.pathname == "/html") {
-            getAntwort(databaseUrl);
+        if (url.pathname == "/holen") {
+            let ausgabe: string = "";
+            let cursor: Mongo.Cursor = await eingabe.find();
+            while (await cursor.hasNext())
+            {
+                ausgabe += JSON.stringify(await cursor.next());
+            }
+            //let was = eingabe.listIndexes();
+            //for (let i = 0; i < Array.from([eingabe]).length; i++) {
+            //    eingaben += JSON.stringify(Array.from([eingabe]));
+            
+           // _response.write(was);
+           // console.log(was);
+            _response.write(ausgabe);
+            //console.log(eingaben);
+            
+            //getAntwort(databaseUrl);
         }
 
-        else if (url.pathname == "/json") {
+        else if (url.pathname == "/abschicken") {
             let jsonString: string = JSON.stringify(url.query);
             _response.write(jsonString);
             formularEingabe(url.query);
@@ -66,7 +82,7 @@ export namespace P_3_1Server {
         await mongoClient.connect();
         eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
         let cursor: Mongo.Cursor = eingabe.find({});
-        console.log(cursor);
+        console.log(eingabe);
         return cursor;
     }
 }

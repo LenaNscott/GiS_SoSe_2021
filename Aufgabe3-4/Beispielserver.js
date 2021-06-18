@@ -27,15 +27,27 @@ var P_3_1Server;
     function handleListen() {
         console.log("Listening");
     }
-    function handleRequest(_request, _response) {
+    async function handleRequest(_request, _response) {
         //console.log("I hear voices!"); 
         let url = Url.parse(_request.url, true);
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        if (url.pathname == "/html") {
-            getAntwort(databaseUrl);
+        if (url.pathname == "/holen") {
+            let ausgabe = "";
+            let cursor = await eingabe.find();
+            while (await cursor.hasNext()) {
+                ausgabe += JSON.stringify(await cursor.next());
+            }
+            //let was = eingabe.listIndexes();
+            //for (let i = 0; i < Array.from([eingabe]).length; i++) {
+            //    eingaben += JSON.stringify(Array.from([eingabe]));
+            // _response.write(was);
+            // console.log(was);
+            _response.write(ausgabe);
+            //console.log(eingaben);
+            //getAntwort(databaseUrl);
         }
-        else if (url.pathname == "/json") {
+        else if (url.pathname == "/abschicken") {
             let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
             formularEingabe(url.query);
@@ -51,7 +63,7 @@ var P_3_1Server;
         await mongoClient.connect();
         eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
         let cursor = eingabe.find({});
-        console.log(cursor);
+        console.log(eingabe);
         return cursor;
     }
 })(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
