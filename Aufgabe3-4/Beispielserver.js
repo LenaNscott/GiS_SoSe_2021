@@ -38,14 +38,7 @@ var P_3_1Server;
             while (await cursor.hasNext()) {
                 ausgabe += JSON.stringify(await cursor.next());
             }
-            //let was = eingabe.listIndexes();
-            //for (let i = 0; i < Array.from([eingabe]).length; i++) {
-            //    eingaben += JSON.stringify(Array.from([eingabe]));
-            // _response.write(was);
-            // console.log(was);
             _response.write(ausgabe);
-            //console.log(eingaben);
-            //getAntwort(databaseUrl);
         }
         else if (url.pathname == "/abschicken") {
             let jsonString = JSON.stringify(url.query);
@@ -56,15 +49,6 @@ var P_3_1Server;
     }
     function formularEingabe(_anmeldung) {
         eingabe.insert(_anmeldung);
-    }
-    async function getAntwort(_url) {
-        let options = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient = new Mongo.MongoClient(_url, options);
-        await mongoClient.connect();
-        eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
-        let cursor = eingabe.find({});
-        console.log(eingabe);
-        return cursor;
     }
 })(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
 //# sourceMappingURL=Beispielserver.js.map

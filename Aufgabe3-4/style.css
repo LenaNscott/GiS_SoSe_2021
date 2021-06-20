@@ -63,10 +63,10 @@
     left: 800px;
 }
 
-#antwort {
-    height: auto;
-    width: auto;
+#antwortDiv {
     position: absolute;
-    top: 400px;
-    left: 0px;
+    top: 500px;
+    left: 100px;
+    width: 2000px;
+    white-space: pre-wrap;
 }

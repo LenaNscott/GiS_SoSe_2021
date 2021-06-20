@@ -46,20 +46,11 @@ export namespace P_3_1Server {
         if (url.pathname == "/holen") {
             let ausgabe: string = "";
             let cursor: Mongo.Cursor = await eingabe.find();
-            while (await cursor.hasNext())
-            {
+            while (await cursor.hasNext()) {
                 ausgabe += JSON.stringify(await cursor.next());
             }
-            //let was = eingabe.listIndexes();
-            //for (let i = 0; i < Array.from([eingabe]).length; i++) {
-            //    eingaben += JSON.stringify(Array.from([eingabe]));
-            
-           // _response.write(was);
-           // console.log(was);
+    
             _response.write(ausgabe);
-            //console.log(eingaben);
-            
-            //getAntwort(databaseUrl);
         }
 
         else if (url.pathname == "/abschicken") {
@@ -76,13 +67,4 @@ export namespace P_3_1Server {
         eingabe.insert(_anmeldung);
     }
 
-    async function getAntwort (_url: string): Promise<any> {
-        let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
-        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
-        await mongoClient.connect();
-        eingabe = mongoClient.db("Datenbank").collection("Formulardaten");
-        let cursor: Mongo.Cursor = eingabe.find({});
-        console.log(eingabe);
-        return cursor;
-    }
 }
