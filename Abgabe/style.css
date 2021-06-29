@@ -107,14 +107,174 @@ table, th, td {
 }
 
 img {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     position: absolute;
+    z-index: 4;
 }
 
 #nr1 {
     position: absolute;
     border: 10px;
-    margin-left: 15px;
-
+    left: 400px;
+    top: 170px;
 }
+
+#nr2 {
+    position: absolute;
+    border: 10px;
+    left: 400px;
+    top: 300px;
+}
+
+#nr3 {
+    position: absolute;
+    border: 10px;
+    left: 400px;
+    top: 430px;
+}
+
+#nr4 {
+    position: absolute;
+    border: 10px;
+    left: 400px;
+    top: 560px;
+}
+
+#nr5 {
+    position: absolute;
+    border: 10px;
+    left: 530px;
+    top: 170px;
+}
+
+#nr6 {
+    position: absolute;
+    border: 10px;
+    left: 530px;
+    top: 300px;
+}
+
+#nr7 {
+    position: absolute;
+    border: 10px;
+    left: 530px;
+    top: 430px;
+}
+
+#nr8 {
+    position: absolute;
+    border: 10px;
+    left: 530px;
+    top: 560px;
+}
+
+#nr9 {
+    position: absolute;
+    border: 10px;
+    left: 660px;
+    top: 170px;
+}
+
+#nr10 {
+    position: absolute;
+    border: 10px;
+    left: 660px;
+    top: 300px;
+}
+
+#nr11 {
+    position: absolute;
+    border: 10px;
+    left: 660px;
+    top: 430px;
+}
+
+#nr12 {
+    position: absolute;
+    border: 10px;
+    left: 660px;
+    top: 560px;
+}
+
+
+#nr13 {
+    position: absolute;
+    border: 10px;
+    left: 790px;
+    top: 170px;
+}
+
+#nr14 {
+    position: absolute;
+    border: 10px;
+    left: 790px;
+    top: 300px;
+}
+
+#nr15 {
+    position: absolute;
+    border: 10px;
+    left: 790px;
+    top: 430px;
+}
+
+#nr16 {
+    position: absolute;
+    border: 10px;
+    left: 790px;
+    top: 560px;
+}
+
+#nr17 {
+    position: absolute;
+    border: 10px;
+    left: 920px;
+    top: 170px;
+}
+
+#nr18 {
+    position: absolute;
+    border: 10px;
+    left: 920px;
+    top: 300px;
+}
+
+#nr19 {
+    position: absolute;
+    border: 10px;
+    left: 920px;
+    top: 430px;
+}
+
+#nr20 {
+    position: absolute;
+    border: 10px;
+    left: 920px;
+    top: 560px;
+}
+
+#bild1 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild1;
+}
+@keyframes bild1 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        top: 170px;
+        left: 400px;
+    }
+}
+
+

@@ -4,6 +4,7 @@ exports.P_3_1Server = void 0;
 const Http = require("http");
 const Url = require("url");
 const Mongo = require("mongodb");
+// import { type } from "os";
 var P_3_1Server;
 (function (P_3_1Server) {
     let eingabe;
@@ -47,8 +48,8 @@ var P_3_1Server;
         }
         _response.end();
     }
-    function formularEingabe(_anmeldung) {
-        eingabe.insert(_anmeldung);
+    function formularEingabe(_url) {
+        eingabe.insert(_url);
     }
 })(P_3_1Server = exports.P_3_1Server || (exports.P_3_1Server = {}));
 //# sourceMappingURL=server.js.map
