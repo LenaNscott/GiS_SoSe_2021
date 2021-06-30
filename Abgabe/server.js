@@ -39,6 +39,7 @@ var P_3_1Server;
             while (await cursor.hasNext()) {
                 ausgabe += JSON.stringify(await cursor.next());
             }
+            console.log(ausgabe);
             _response.write(ausgabe);
         }
         else if (url.pathname == "/abschicken") {

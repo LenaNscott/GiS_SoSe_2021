@@ -15,3 +15,13 @@ async function urlHinzufuegen(): Promise<string> {
     let responseText: string = await response.text();
     return responseText;   
 }
+
+async function urlHolen(): Promise<string> {
+    let formData: FormData = new FormData(document.forms[0]);
+    let url: string = "http://localhost:8100//holen";   // https://lenasfancyapp.herokuapp.com
+    let query: URLSearchParams = new URLSearchParams(<any>formData);
+    let response: Response = await fetch(url + "?" + query.toString());
+    let responseText: string = await response.text();
+    console.log(responseText);
+    return responseText;   
+}

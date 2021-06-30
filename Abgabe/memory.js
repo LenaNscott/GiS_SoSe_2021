@@ -12,4 +12,13 @@ async function urlHinzufuegen() {
     let responseText = await response.text();
     return responseText;
 }
+async function urlHolen() {
+    let formData = new FormData(document.forms[0]);
+    let url = "http://localhost:8100//holen"; // https://lenasfancyapp.herokuapp.com
+    let query = new URLSearchParams(formData);
+    let response = await fetch(url + "?" + query.toString());
+    let responseText = await response.text();
+    console.log(responseText);
+    return responseText;
+}
 //# sourceMappingURL=memory.js.map

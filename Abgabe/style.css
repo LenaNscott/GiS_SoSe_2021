@@ -277,4 +277,442 @@ img {
     }
 }
 
+#bild2 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild2;
+}
+@keyframes bild2 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        top: 300px;
+        left: 400px;
+    }
+}
+
+#bild3 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild3;
+}
+@keyframes bild3 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        top: 430px;
+        left: 400px;
+    }
+}
+
+#bild4 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild4;
+}
+@keyframes bild4 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        top: 560px;
+        left: 400px;
+    }
+}
+
+#bild5 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild5;
+}
+@keyframes bild5 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 530px;
+        top: 170px;
+    }
+}
+
+#bild6 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild6;
+}
+@keyframes bild6 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 530px;
+        top: 300px;
+    }
+}
+
+#bild7 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild7;
+}
+@keyframes bild7 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 530px;
+        top: 430px;
+    }
+}
+
+#bild8 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild8;
+}
+@keyframes bild8 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 530px;
+        top: 560px;
+    }
+}
+
+#bild9 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild9;
+}
+@keyframes bild9 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 660px;
+        top: 170px;
+    }
+}
+
+#bild10 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild10;
+}
+@keyframes bild10 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 660px;
+        top: 300px;
+    }
+}
+
+#bild11 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild11;
+}
+@keyframes bild11 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 660px;
+        top: 430px;
+    }
+}
+
+#bild12 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild12;
+}
+@keyframes bild12 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 660px;
+        top: 560px;
+    }
+}
+
+#bild13 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild13;
+}
+@keyframes bild13 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 790px;
+        top: 170px;
+    }
+}
+
+#bild14 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild14;
+}
+@keyframes bild14 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 790px;
+        top: 300px;
+    }
+}
+
+#bild15 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild15;
+}
+@keyframes bild15 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 790px;
+        top: 430px;
+    }
+}
+
+#bild16 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild16;
+}
+@keyframes bild16 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 790px;
+        top: 560px;
+    }
+}
+
+#bild17 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild17;
+}
+@keyframes bild17 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 920px;
+        top: 170px;
+    }
+}
+
+#bild18 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild18;
+}
+@keyframes bild18 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 920px;
+        top: 300px;
+    }
+}
+
+#bild19 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild19;
+}
+@keyframes bild19 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 920px;
+        top: 430px;
+    }
+}
+
+#bild20 {
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-name: bild20;
+}
+@keyframes bild20 {
+    
+    from {
+        width: 300px;
+        height: 300px;
+        top: 275px;
+        left: 575px;
+    }
+
+    to {
+        width: 120px;
+        height: 120px;
+        left: 920px;
+        top: 560px;
+    }
+}
+
+
 
